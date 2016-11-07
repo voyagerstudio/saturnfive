@@ -1,4 +1,8 @@
-.o-btn {
+.o-btn,
+.o-btn:visited,
+button,
+[type="button"],
+[type="reset"] {
   color: grayscale(white);
   display: inline-block;
   text-decoration: none;
@@ -49,7 +53,9 @@
     pointer-events: none;
     opacity: 0.5;
 
-    &:focus {
+    &:focus,
+    &:hover,
+    &:active {
       transform: translateY(0);
       box-shadow: none;
     }
