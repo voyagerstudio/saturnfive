@@ -7,10 +7,10 @@ button,
   display: inline-block;
   text-decoration: none;
   margin: .4rem;
-  // text-shadow: 0 0.1rem 0 color(brand-color-1, -4);
+  // text-shadow: 0 0.1rem 0 color(brand-color-1, -2);
   border: none;
-  // background: -webkit-linear-gradient(color(brand-color-1, 2),color(brand-color-1), color(brand-color-1, -2));
   background: color(brand-color-1);
+  // background: -webkit-linear-gradient(color(brand-color-1, 2),color(brand-color-1), color(brand-color-1, -2));
   box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.08), 0px 4px 6px 0px rgba(48,33,123,0.10);
   font-size: $font-size-h4;
   line-height: $line-height-ui;
