@@ -3,7 +3,7 @@
 button,
 [type="button"],
 [type="reset"] {
-  background: linear-gradient(brand-color-1);
+  background: lin-gradient(brand-color-1);
   border: none;
   border-radius: $border-radius-medium;
   box-shadow: light-shadow(3, brand-color-1);
@@ -25,7 +25,7 @@ button,
   &:focus,
   &:hover,
   &.is-hover {
-    background: linear-gradient(brand-color-1, light);
+    background: lin-gradient(brand-color-1, light);
     box-shadow: light-shadow(5, brand-color-1);
     transform: translateY(-2px);
   }
@@ -38,7 +38,7 @@ button,
 
   &:active,
   &.is-active {
-    background: linear-gradient(brand-color-1, dark);
+    background: lin-gradient(brand-color-1, dark);
     color: grayscale(white, 0.85);
     box-shadow: light-shadow(1, brand-color-1);
     transform: translateY(0);
