@@ -16,6 +16,7 @@ button,
   text-transform: uppercase;
   transition: all 150ms;
   vertical-align: middle;
+  -webkit-appearance: none;
 
   @extend .disable-text-select;
 
@@ -52,9 +53,6 @@ button,
 // button,
 // [type="button"],
 // [type="reset"] {
-//   box-shadow: light-shadow(3, brand-color-1);
-//   margin: .4rem;
-//   padding: 1rem 1.6rem;
 //   text-decoration: none;
 //   text-shadow: 0 0.1rem 0 color(brand-color-1, -2);
 //   text-transform: uppercase;
