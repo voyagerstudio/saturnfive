@@ -4,6 +4,8 @@ button,
 [type="button"],
 [type="submit"],
 [type="reset"] {
+  -webkit-appearance: none;
+  border-radius: 0;
   background: grayscale(4);
   border: none;
   border-radius: 0.3rem;
