@@ -1,0 +1,15 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-size: 100% !important;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
