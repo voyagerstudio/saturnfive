@@ -1,0 +1,17 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font: type-display(4);
+  margin: 0;
+}
+
+// Remove user agent styles
+dfn,
+var,
+cite,
+address {
+  font-style: normal;
+}

@@ -1,1 +1,8 @@
+// Base - unclassed elements
+@import 'base/base.import';
+
+// Utilities - helpers & overrides
+@import 'utilities/utilities.import';
+
+// Objects - These are the smallest pieces of compiled SCSS
 @import 'objects/objects.import';
