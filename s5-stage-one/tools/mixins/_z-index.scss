@@ -1,0 +1,3 @@
+@mixin z-index($object) {
+  z-index: z-index-output($object);
+}

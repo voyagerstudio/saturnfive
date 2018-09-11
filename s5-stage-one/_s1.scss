@@ -1,0 +1,10 @@
+// This importer shouldn't be touched. Any overrides
+// can be modified outside of this directory when kerosene
+// is imported. Variable and sass-map properties are
+// just defaults. New declarations will override them.
+
+// Settings - Settings, Global Variables, and configurations
+@import 'settings/settings.import';
+
+// Tools - mixins and functions
+@import 'tools/tools.import';

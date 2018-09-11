@@ -1,0 +1,40 @@
+// Strip Unit
+
+// input: attribute: strip-unit([number-with-unit]);
+// output: attribute: [unitless-number];
+
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+
+  @return $number;
+}
+
+
+// REM Calculator
+
+@function px($size) {
+  $remSize: $size / strip-unit(16px); // target / root font size
+  @return #{$remSize}rem;
+}
+
+
+// Power Function
+// via - https://www.bhalash.com/archives/13544805657
+
+@function pow($number, $power) {
+    $exponent: 1;
+
+    @if $power > 0 {
+        @for $i from 1 through $power {
+            $exponent: $exponent * $number;
+        }
+    } @else if $power < 0 {
+        @for $i from 1 through $power {
+            $exponent: $exponent / $number;
+        }
+    }
+
+    @return $exponent;
+}

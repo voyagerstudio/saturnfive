@@ -1,0 +1,106 @@
+@function shadow($step:0, $color:black, $intensity-multiplier:1) {
+  $box-shadow-props: ();
+
+  @if ($step == 0) {
+    $box-shadow-props: 0 0 0 color($color, 0, 0.0 * $intensity-modifier);
+  }
+
+  @if ($step == 1) {
+    $box-shadow-props: 0 0 px(2) color($color, -5, 0.05 * $intensity-multiplier);
+  }
+
+  @if ($step == 2) {
+    $box-shadow-props: 0 0 px(2) color($color, -5, 0.12 * $intensity-multiplier);
+  }
+
+  @if ($step == 3) {
+    $box-shadow-props: 0 0 px(4) color($color, -5, 0.15 * $intensity-multiplier);
+  }
+
+  @if ($step == 4) {
+    $box-shadow-props: 0 px(2) px(3) color($color, -5, 0.15 * $intensity-multiplier),
+                       0 px(0) px(2) color($color, -5, 0.10 * $intensity-multiplier);
+  }
+
+  @if ($step == 5) {
+    $box-shadow-props: 0 px(3) px(3) color($color, -5, 0.17 * $intensity-multiplier),
+                       0 px(0) px(2) color($color, -5, 0.10 * $intensity-multiplier);
+  }
+
+  @if ($step == 6) {
+    $box-shadow-props: 0 px(4) px(4) color($color, -5, 0.17 * $intensity-multiplier),
+                       0 px(0) px(2) color($color, -5, 0.10 * $intensity-multiplier);
+  }
+
+  @if ($step == 7) {
+    $box-shadow-props: 0 px(5) px(6) color($color, -5, 0.17 * $intensity-multiplier),
+                       0 px(0) px(2) color($color, -5, 0.10 * $intensity-multiplier);
+  }
+
+  @if ($step == 8) {
+    $box-shadow-props: 0 px(6) px(6) color($color, -5, 0.19 * $intensity-multiplier),
+                       0 px(0) px(3) color($color, -5, 0.10 * $intensity-multiplier);
+  }
+
+  @if ($step == 9) {
+    $box-shadow-props: 0 px(7) px(8) color($color, -5, 0.19 * $intensity-multiplier),
+                       0 px(0) px(3) color($color, -5, 0.12 * $intensity-multiplier);
+  }
+
+  @if ($step == 10) {
+    $box-shadow-props: 0 px(8) px(9) color($color, -5, 0.20 * $intensity-multiplier),
+                       0 px(0) px(3) color($color, -5, 0.12 * $intensity-multiplier);
+  }
+
+  @if ($step == 11) {
+    $box-shadow-props: 0 px(10) px(12) color($color, -5, 0.20 * $intensity-multiplier),
+                       0 px(0) px(3) color($color, -5, 0.12 * $intensity-multiplier);
+  }
+
+  @if ($step == 12) {
+    $box-shadow-props: 0 px(13) px(14) color($color, -5, 0.20 * $intensity-multiplier),
+                       0 px(0) px(5) color($color, -5, 0.12 * $intensity-multiplier);
+  }
+
+  @if ($step == 13) {
+    $box-shadow-props: 0 px(15) px(18) color($color, -5, 0.20 * $intensity-multiplier),
+                       0 px(0) px(5) color($color, -5, 0.12 * $intensity-multiplier);
+  }
+
+  @if ($step == 14) {
+    $box-shadow-props: 0 px(17) px(20) color($color, -5, 0.20 * $intensity-multiplier),
+                       0 px(0) px(5) color($color, -5, 0.12 * $intensity-multiplier);
+  }
+
+  @if ($step == 15) {
+    $box-shadow-props: 0 px(20) px(22) color($color, -5, 0.20 * $intensity-multiplier),
+                       0 px(0) px(5) color($color, -5, 0.12 * $intensity-multiplier);
+  }
+
+  @if ($step == 16) {
+    $box-shadow-props: 0 px(26) px(27) color($color, -5, 0.20 * $intensity-multiplier),
+                       0 px(0) px(7) color($color, -5, 0.14 * $intensity-multiplier);
+  }
+
+  @if ($step == 17) {
+    $box-shadow-props: 0 px(30) px(40) color($color, -5, 0.22 * $intensity-multiplier),
+                       0 px(0) px(7) color($color, -5, 0.14 * $intensity-multiplier);
+  }
+
+  @if ($step == 18) {
+    $box-shadow-props: 0 px(40) px(45) color($color, -5, 0.22 * $intensity-multiplier),
+                       0 px(2) px(9) color($color, -5, 0.16 * $intensity-multiplier);
+  }
+
+  @if ($step == 19) {
+    $box-shadow-props: 0 px(41) px(65) color($color, -5, 0.22 * $intensity-multiplier),
+                       0 px(2) px(9) color($color, -5, 0.19 * $intensity-multiplier);
+  }
+
+  @if ($step == 20) {
+    $box-shadow-props: 0 px(45) px(75) color($color, -5, 0.22 * $intensity-multiplier),
+                       0 px(3) px(10) color($color, -5, 0.19 * $intensity-multiplier);
+  }
+
+  @return $box-shadow-props;
+}

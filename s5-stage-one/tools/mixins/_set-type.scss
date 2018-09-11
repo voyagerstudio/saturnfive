@@ -1,0 +1,79 @@
+// Set type function
+@mixin set-type($context:body, $font-size:1, $weight:normal, $style:normal) {
+  font-size: font-size($font-size);
+
+  // Contexts
+  @if $context == body {
+    font-family: $fontstack-body;
+    line-height: $line-height-base;
+  }
+
+  @else if $context == masthead {
+    font-family: $fontstack-masthead;
+    line-height: $line-height-heading;
+  }
+
+  @else if $context == display {
+    font-family: $fontstack-display;
+    line-height: $line-height-heading;
+  }
+
+  @else if $context == code {
+    font-family: $fontstack-code;
+    line-height: $line-height-base;
+  }
+
+  @else if $context == interface {
+    font-family: $fontstack-interface;
+    line-height: $line-height-interface;
+  }
+
+  @else if $context == caption {
+    font-family: $fontstack-caption;
+    line-height: $line-height-base;
+  }
+
+  @else if $context == aside {
+    font-family: $fontstack-aside;
+    line-height: $line-height-base;
+  }
+
+  @else if $context == blockquote {
+    font-family: $fontstack-blockquote;
+    line-height: $line-height-base;
+  }
+
+  // Weights
+  @if $weight == normal {
+    font-weight: $font-normal;
+  }
+
+  @else if $weight == light {
+    font-weight: $font-light;
+  }
+
+  @else if $weight == medium {
+    font-weight: $font-medium;
+  }
+
+  @else if $weight == bold {
+    font-weight: $font-bold;
+  }
+
+  @else if $weight == black {
+    font-weight: $font-black;
+  }
+
+  // Style
+  @if $style == normal {
+    font-style: normal;
+  }
+
+  @else if $style == italic {
+    font-style: italic;
+  }
+
+  @else if $style == oblique {
+    font-style: oblique;
+  }
+}
