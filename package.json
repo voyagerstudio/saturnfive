@@ -1,6 +1,6 @@
 {
     "name": "@voyager-studio/saturnfive",
-    "version": "0.2.1",
+    "version": "0.2.2",
     "description": "A design system springboard with three distinct levels of fidelity and opinionated code.",
     "main": "_SV-SI.scss",
     "scripts": {
