@@ -1,0 +1,30 @@
+// Fontstacks
+$s5_fontstack--monospace: "Andale Mono",AndaleMono,monospace !default;
+$s5_fontstack--sans-serif: sans-serif !default;
+$s5_fontstack--serif: serif !default;
+
+$s5_fontstack--display: BlinkMacSystemFont,-apple-system,"Roboto","Droid Sans","Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif !default;
+$s5_fontstack--masthead: $s5_fontstack--display !default;
+$s5_fontstack--body: $s5_fontstack--display !default;
+$s5_fontstack--text: $s5_fontstack--body !default;
+$s5_fontstack--code: $s5_fontstack--monospace !default;
+$s5_fontstack--interface: $s5_fontstack--display !default;
+
+$s5_fontstack--caption: $s5_fontstack--display !default;
+$s5_fontstack--aside: $s5_fontstack--display !default;
+$s5_fontstack--blockquote: $s5_fontstack--display !default;
+
+// Font Weights
+$s5_weight--thin: 100 !default;
+$s5_weight--extra-light: 200 !default;
+$s5_weight--light: 300 !default;
+$s5_weight--book: 400 !default;
+$s5_weight--medium: 500 !default;
+$s5_weight--demi-bold: 600 !default;
+$s5_weight--bold: 700 !default;
+$s5_weight--heavy: 800 !default;
+$s5_weight--black: 900 !default;
+
+// Line Heights
+
+// Type Scale Modifiers

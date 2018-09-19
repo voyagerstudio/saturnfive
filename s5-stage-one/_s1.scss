@@ -3,8 +3,8 @@
 // is imported. Variable and sass-map properties are
 // just defaults. New declarations will override them.
 
-// Settings - Settings, Global Variables, and configurations
-@import 'settings/settings.import';
+// Tokens - Settings, Global Variables, and configurations
+@import 'tokens/token.import';
 
 // Tools - mixins and functions
 @import 'tools/tools.import';
