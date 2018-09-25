@@ -26,5 +26,9 @@ $s5_weight--heavy: 800 !default;
 $s5_weight--black: 900 !default;
 
 // Line Heights
+// @TODO: add new line heights as tokens and as properties in s5s2/patterns/set-type
 
 // Type Scale Modifiers
+$s5_font-scale-modifier: 1.125 !default;
+$s5_font-scale-base: 10px !default;
+$s5_font-root-size: 16px !default;

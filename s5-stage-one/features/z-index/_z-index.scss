@@ -1,0 +1,10 @@
+@function z-index-output($object) {
+  @if index($z-order, $object) {
+    @return (length($z-order) - index($z-order, $object))+1;
+  }
+
+  @else {
+    @warn 'There is no object "#{$object}" in this list; choose from the following: #{$z-order}';
+    @return 'There is no object "#{$object}" in this list; choose from the following: #{$z-order}';
+  }
+}

@@ -1,10 +1,26 @@
-// This importer shouldn't be touched. Any overrides
-// can be modified outside of this directory when kerosene
-// is imported. Variable and sass-map properties are
-// just defaults. New declarations will override them.
+// 
+// 
+//   _____  __      __              _____   __ 
+//  / ____| \ \    / /             / ____| /_ |
+// | (___    \ \  / /    ______   | (___    | |
+//  \___ \    \ \/ /    |______|   \___ \   | |
+//  ____) |    \  /                ____) |  | |
+// |_____/      \/                |_____/   |_|
+//
+//
+//                                            
+                                            
 
 // Tokens - Settings, Global Variables, and configurations
-@import 'tokens/token.import';
+@import 'tokens/token.color';
+@import 'tokens/token.typography';
+@import 'tokens/token.base-units';
+@import 'tokens/token.z-index';
 
-// Tools - mixins and functions
-@import 'tools/tools.import';
+// Features - Core tools and design shortcuts
+@import 'features/color/color';
+@import 'features/units/units';
+@import 'features/shadows/shadows';
+@import 'features/gradient/gradient';
+@import 'features/font-scale/font-scale';
+@import 'features/z-index/z-index';

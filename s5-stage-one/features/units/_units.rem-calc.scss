@@ -1,0 +1,6 @@
+// REM Calculator
+
+@function px($size) {
+  $remSize: $size / strip-unit($s5_font-root-size); // target / root font size
+  @return #{$remSize}rem;
+}

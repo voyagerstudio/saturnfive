@@ -6,7 +6,7 @@
     margin: -1px;
     padding: 0;
     border: 0;
-    clip: rect( 0 0 0 0);
+    clip: rect(0 0 0 0);
     overflow: hidden;
   }
 
@@ -17,6 +17,6 @@
     margin: 0;
     clip: auto;
     overflow: visible;
-    z-index: 999999999999999999999999999999999;
+    z-index: 999999999999999999999999999999999; // @TODO: replace with (integer-count on $z-index) + 1
   }
 }

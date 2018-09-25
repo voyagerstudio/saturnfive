@@ -1,0 +1,8 @@
+// Font size calculator
+@function font-scale($step) {
+  $stripped-base: (strip-unit($s5_font-scale-base));
+  $font-size-calc: ($stripped-base * pow($s5_font-scale-modifier, (($step - 1))));
+  $rem-font-size: (px($font-size-calc));
+
+  @return $rem-font-size;
+}

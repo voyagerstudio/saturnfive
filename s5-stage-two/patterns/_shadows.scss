@@ -4,9 +4,10 @@
 
 @mixin interactive-shadow($step:0, $color:black, $intensity-multiplier:1, $border-radius:0, $animation-speed:75ms, $animation-type:ease-in) {
   position: relative;
+  box-sizing: border-box;
 
   &:after {
-    @include share-px-to-rem(top, right, bottom, left, 0);
+    @include share-px-value(top, right, bottom, left, 0);
     border-radius: px($border-radius);
     box-shadow: shadow($step, $color, $intensity-multiplier);
     content: '';
@@ -24,8 +25,8 @@
   }
 
   &:active {
-      &:after {
-        opacity: 0;
-      }
+    &:after {
+      opacity: 0;
     }
   }
+}
