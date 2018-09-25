@@ -6,7 +6,7 @@ This is a quick guide that documents the various functions and mixins along with
 
 ### Features
 
-**Color**
+#### Color
 ```scss
 // color($name, $shade:0, $alpha:1)
 // $shade options: -9 to 9
@@ -19,7 +19,7 @@ This is a quick guide that documents the various functions and mixins along with
 }
 ```
 
-**Units**
+#### Units
 ```scss
 
 // strip-unit($number)
@@ -33,7 +33,7 @@ This is a quick guide that documents the various functions and mixins along with
 
 ```
 
-**Shadows**
+#### Shadows
 ```scss
 
 // shadow($step:0, $color:black, $intensity-multiplier:1)
@@ -45,7 +45,7 @@ This is a quick guide that documents the various functions and mixins along with
 
 ```
 
-**Simple Gradient**
+#### Simple Gradient
 ```scss
 
 // simple-gradient($gradient-color, $lightness:base)
@@ -56,7 +56,7 @@ This is a quick guide that documents the various functions and mixins along with
 }
 ```
 
-**Font Scale**
+#### Font Scale
 ```scss
 
 // font-scale($step)
@@ -67,3 +67,52 @@ This is a quick guide that documents the various functions and mixins along with
 }
 ```
 
+#### Z Index
+```scss
+
+// z-index-output($object)
+// $object options: anything from the list stored in $z-order variable
+
+.example-div {
+  z-index: z-index-output(example-one);
+}
+```
+
+---
+## Saturn V — Stage 002
+
+### Utilities
+
+#### Focusable Only
+`@include focusable-only;` - Styles dom element so that it is hidden and only accessible to screen readers and to sighted users via focusing with keyboard navigation.
+
+#### Disable Text Select
+`@include disable-text-select;` - disables the users ability to select text with this mixin applied. 
+
+#### Share px Val
+```scss
+
+// @include share-px-val($props...)
+// eg: @include share-px-val(margin-top, margin-left, margin-right, 10) - will add margin-top, margin-left, and margin-right properties with 10px converted to rem
+
+```
+
+### Patterns
+
+#### Set-Type
+```scss
+
+```
+
+#### Z-Index
+```scss
+
+// @include z-index($object)
+
+.example-div {
+  @include-z-index(example-one);
+}
+
+```
+
+#### Shadows
