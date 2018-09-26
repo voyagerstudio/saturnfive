@@ -1,6 +1,31 @@
 # Saturn V Cheat sheet
 This is a quick guide that documents the various functions and mixins along with their arguments.
 
+## Table of Contents:
+* [Stage 001](https://github.com/voyagerstudio/saturnfive/blob/golden-source/CHEATSHEET.md#saturn-v--stage-001)
+  * [Tokens](https://github.com/voyagerstudio/saturnfive/blob/golden-source/CHEATSHEET.md#tokens)
+    * [Color](https://github.com/voyagerstudio/saturnfive/blob/golden-source/CHEATSHEET.md#color-tokens)
+    * [Type](https://github.com/voyagerstudio/saturnfive/blob/golden-source/CHEATSHEET.md#type-tokens)
+    * [Base units](https://github.com/voyagerstudio/saturnfive/blob/golden-source/CHEATSHEET.md#base-unit-tokens)
+    * [Z-Index](https://github.com/voyagerstudio/saturnfive/blob/golden-source/CHEATSHEET.md#z-index-default)
+  * [Features](https://github.com/voyagerstudio/saturnfive/blob/golden-source/CHEATSHEET.md#features)
+    * [Color](https://github.com/voyagerstudio/saturnfive/blob/golden-source/CHEATSHEET.md#color)
+    * [Units](https://github.com/voyagerstudio/saturnfive/blob/golden-source/CHEATSHEET.md#units)
+    * [Shadow](https://github.com/voyagerstudio/saturnfive/blob/golden-source/CHEATSHEET.md#shadows)
+    * [Gradient](https://github.com/voyagerstudio/saturnfive/blob/golden-source/CHEATSHEET.md#simple-gradient)
+    * [Type Scale](https://github.com/voyagerstudio/saturnfive/blob/golden-source/CHEATSHEET.md#font-scale)
+    * [Z-Index](https://github.com/voyagerstudio/saturnfive/blob/golden-source/CHEATSHEET.md#z-index)
+* [Stage 002](https://github.com/voyagerstudio/saturnfive/blob/golden-source/CHEATSHEET.md#saturn-v--stage-002)
+  * [Utilities](https://github.com/voyagerstudio/saturnfive/blob/golden-source/CHEATSHEET.md#utilities)
+    * [Focusable-Only](https://github.com/voyagerstudio/saturnfive/blob/golden-source/CHEATSHEET.md#focusable-only)
+    * [Disable Text Selection](https://github.com/voyagerstudio/saturnfive/blob/golden-source/CHEATSHEET.md#disable-text-select)
+    * [Share Pixel Value](https://github.com/voyagerstudio/saturnfive/blob/golden-source/CHEATSHEET.md#share-px-val)
+  * [Patterns](https://github.com/voyagerstudio/saturnfive/blob/golden-source/CHEATSHEET.md#patterns)
+    * [Set Type](https://github.com/voyagerstudio/saturnfive/blob/golden-source/CHEATSHEET.md#set-type)
+    * [Z-Index](https://github.com/voyagerstudio/saturnfive/blob/golden-source/CHEATSHEET.md#z-index-1)
+    * [Shadows](https://github.com/voyagerstudio/saturnfive/blob/golden-source/CHEATSHEET.md#shadows-1)
+* Stage 003 
+
 ---
 ## Saturn V — Stage 001
 
