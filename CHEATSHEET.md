@@ -1,5 +1,5 @@
 # Saturn V Cheat sheet
-This is a quick guide that documents the various functions and mixins along with their arguments.
+This is a quick guide that documents the various functions and mixins along with their arguments. With the exception of your own overrides for Saturn V tokens, Saturn V should be imported before your own SCSS. Saturn V operates under the assumption that the root font size on `html` is `100%` or `16px`. 
 
 ## Table of Contents:
 * [Stage 001](https://github.com/voyagerstudio/saturnfive/blob/golden-source/CHEATSHEET.md#saturn-v--stage-001)
