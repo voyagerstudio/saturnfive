@@ -55,6 +55,7 @@ To override tokens, make sure you set a new value _before_ your import of Saturn
 #### Z-index default
 * `$z-order` - this is a list of strings that should match up with different parts of your UI. The order from first to last will assign z-index values going from highest to lowest. (essentially, top on the list is also top on the stack)
 
+---
 ### Features
 
 #### Color
@@ -148,6 +149,7 @@ To override tokens, make sure you set a new value _before_ your import of Saturn
 
 ```
 
+---
 ### Patterns
 
 #### Set-Type
