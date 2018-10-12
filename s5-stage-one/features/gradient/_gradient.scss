@@ -2,31 +2,31 @@
   $gradient-val: ();
 
   @if ($lightness==darkest) {
-    $gradient-val: -webkit-linear-gradient(color($gradient-color, -3), color($gradient-color, -4), color($gradient-color, -6));
+    $gradient-val: -webkit-linear-gradient(set-color($gradient-color, -3),set-color($gradient-color, -4),set-color($gradient-color, -6));
   }
 
   @if ($lightness==darker) {
-    $gradient-val: -webkit-linear-gradient(color($gradient-color, -1), color($gradient-color, -3), color($gradient-color, -4));
+    $gradient-val: -webkit-linear-gradient(set-color($gradient-color, -1),set-color($gradient-color, -3),set-color($gradient-color, -4));
   }
 
   @if ($lightness==dark) {
-    $gradient-val: -webkit-linear-gradient(color($gradient-color), color($gradient-color, -1), color($gradient-color, -3));
+    $gradient-val: -webkit-linear-gradient(set-color($gradient-color),set-color($gradient-color, -1),set-color($gradient-color, -3));
   }
 
   @if ($lightness==base) {
-    $gradient-val: -webkit-linear-gradient(color($gradient-color, 2), color($gradient-color), color($gradient-color, -2));
+    $gradient-val: -webkit-linear-gradient(set-color($gradient-color, 2),set-color($gradient-color),set-color($gradient-color, -2));
   }
 
   @if ($lightness==light) {
-    $gradient-val: -webkit-linear-gradient(color($gradient-color, 3), color($gradient-color, 1), color($gradient-color));
+    $gradient-val: -webkit-linear-gradient(set-color($gradient-color, 3),set-color($gradient-color, 1),set-color($gradient-color));
   }
 
   @if ($lightness==lighter) {
-    $gradient-val: -webkit-linear-gradient(lighten(color($gradient-color, 4), 5%), lighten(color($gradient-color, 2), 5%), lighten(color($gradient-color, 1), 5%));
+    $gradient-val: -webkit-linear-gradient(lighten(set-color($gradient-color, 4), 5%), lighten(set-color($gradient-color, 2), 5%), lighten(set-color($gradient-color, 1), 5%));
   }
 
   @if ($lightness==lightest) {
-    $gradient-val: -webkit-linear-gradient(lighten(color($gradient-color, 6), 5%), lighten(color($gradient-color, 4), 5%), lighten(color($gradient-color, 2), 5%));
+    $gradient-val: -webkit-linear-gradient(lighten(set-color($gradient-color, 6), 5%), lighten(set-color($gradient-color, 4), 5%), lighten(set-color($gradient-color, 2), 5%));
   }
 
   @return $gradient-val;

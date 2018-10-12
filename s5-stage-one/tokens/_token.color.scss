@@ -14,3 +14,7 @@ $s5_color-alert-base: gold !default;
 $s5_color-warning-base: #f14400 !default;
 $s5_color-danger-base: #dc1414 !default;
 $s5_color-success-base: #1aaa35 !default;
+
+
+// Color Function Features
+$s5_color-scale-step-total: 19 !default; // must be an odd number

@@ -85,14 +85,14 @@ To override tokens, make sure you set a new value _before_ your import of Saturn
 
 #### Color
 ```scss
-// color($name, $shade:0, $alpha:1)
+//set-color($name, $shade:0, $alpha:1)
 // $shade options: -9 to 9
 // $name options: anything in color map, by default any of the 147 css color names
 
 .example-div {
-  color: color(red);
-  background-color: color(blue, 9);
-  border: 1px solid color(green, -2, 0.5);
+  color:set-color(red);
+  background-color:set-color(blue, 9);
+  border: 1px solidset-color(green, -2, 0.5);
 }
 ```
 
