@@ -38,12 +38,13 @@ To override tokens, make sure you set a new value _before_ your import of Saturn
 * `$s5_color-brand-color-3` - default tertiary brand color
 * `$s5_color-soft-white` - off white
 * `$s5_color-soft-black` - a dark shade that isn't quite a harsh black
-* `s5_color-focus-base` - a default color for focus
-* `s5_color-info-base` - a default color for highlighting info
-* `s5_color-alert-base` - a default color for highlighting alerts
-* `s5_color-warning-base` - a default color for highlighting warnings
-* `s5_color-danger-base` - a default color for highlighting strong warnings
-* `s5_color-success-base` - a default color for highlighting success messages
+* `$s5_color-focus-base` - a default color for focus
+* `$s5_color-info-base` - a default color for highlighting info
+* `$s5_color-alert-base` - a default color for highlighting alerts
+* `$s5_color-warning-base` - a default color for highlighting warnings
+* `$s5_color-danger-base` - a default color for highlighting strong warnings
+* `$s5_color-success-base` - a default color for highlighting success messages
+* `$s5_color-scale-step-total` - this modifies how many colors are generated with the color feature. By default, this variable is set to 19 meaning the base color, 9 darker colors, and 9 lighter colors. This can be set to any number larger than 5 as long as it is a negative number.  
 
 #### Type Tokens
 * `s5_fontstack--monospace` - monospace fontstack
