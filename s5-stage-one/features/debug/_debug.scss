@@ -1,1 +1,38 @@
-@import 'debug.mixin';
+@mixin debug-overlay($type:grid, $location:local, $opacity:100%, $offset-x:0, $offset-y:0) {
+  $opacity: strip-unit($opacity) * 0.01;
+
+  @if $location=='global' {
+    html:after {
+      content: '';
+      background-image: url($s5_debug-tool--500grid);
+      position: absolute;
+      top: $offset-y;
+      left: $offset-x;
+      right: 0;
+      bottom: 0;
+      opacity: $opacity;
+      z-index: z-index-output(debug);
+    }
+  }
+
+  @if $location=='local' {
+    $self: &;
+
+    & {
+      position: relative;
+    }
+
+    &:after {
+      content: '';
+      background-image: url($s5_debug-tool--500grid);
+      position: absolute;
+      top: $offset-y;
+      left: $offset-x;
+      right: 0;
+      bottom: 0;
+      opacity: $opacity;
+      mix-blend-mode: exclusion;
+      z-index: z-index-output(debug);
+    }
+  }
+}
