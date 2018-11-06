@@ -1,5 +1,5 @@
 // Set type function
-@mixin set-type($context:body, $font-scale:5, $weight:book, $style:normal) {
+@mixin set-type($context:body, $font-scale:5, $weight:book, $line-height:md, $style:normal) {
   font-size: font-scale($font-scale);
 
   // Contexts
@@ -70,6 +70,27 @@
 
   @if $weight==black {
     font-weight: $s5_weight--black;
+  }
+
+  // Line Height
+  @if $line-height==xs {
+    line-height: $s5_line-height-xs;
+  }
+
+  @if $line-height==sm {
+    line-height: $s5_line-height-sm;
+  }
+
+  @if $line-height==md {
+    line-height: $s5_line-height-md;
+  }
+
+  @if $line-height==lg {
+    line-height: $s5_line-height-lg;
+  }
+
+  @if $line-height==xl {
+    line-height: $s5_line-height-xl;
   }
 
   // Style
