@@ -19,6 +19,7 @@
 @import 'tokens/token.z-index';
 
 // Features - Core tools and design shortcuts
+@import 'features/z-index/z-index';
 @import 'features/color/color';
 @import 'features/size-multiplier/size-multiplier';
 @import 'features/debug/debug';
@@ -26,4 +27,3 @@
 @import 'features/shadows/shadows';
 @import 'features/gradient/gradient';
 @import 'features/font-scale/font-scale';
-@import 'features/z-index/z-index';
