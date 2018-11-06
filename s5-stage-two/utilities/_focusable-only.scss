@@ -17,6 +17,6 @@
     margin: 0;
     clip: auto;
     overflow: visible;
-    z-index: 999999999999999999999999999999999; // @TODO: replace with (integer-count on $z-index) + 1
+    z-index: z-index-output(focusable-only);
   }
 }
