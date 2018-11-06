@@ -1,0 +1,19 @@
+@function set-size($multiplier:'1') {
+  $unit: strip-unit($s5_foundation-unit-size);
+
+  @if $multiplier=='pixel' {
+    $calculated-unit: 1;
+    @return px($calculated-unit);
+  }
+
+  @else if $multiplier=='micro' {
+    $calculated-unit: 2;
+    @return px($calculated-unit);
+  }
+
+  @else if $multiplier>=0 {
+    $calculated-unit: $unit * $multiplier;
+
+    @return px($calculated-unit);
+  }
+}
