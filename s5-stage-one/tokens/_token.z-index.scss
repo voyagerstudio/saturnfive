@@ -2,4 +2,9 @@ $z-order:
 "example-one",
 "example-two",
 "example-three"
- !default;
+!default;
+
+$s5_permanent-z-order: 'debug';
+
+
+$s5_z-order: $s5_permanent-z-order, $z-order;

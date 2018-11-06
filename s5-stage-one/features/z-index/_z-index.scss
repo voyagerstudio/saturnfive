@@ -1,6 +1,6 @@
 @function z-index-output($object) {
-  @if index($z-order, $object) {
-    @return (length($z-order) - index($z-order, $object))+1;
+  @if index($s5_z-order, $object) {
+    @return (length($s5_z-order) - index($s5_z-order, $object))+1;
   }
 
   @else {
