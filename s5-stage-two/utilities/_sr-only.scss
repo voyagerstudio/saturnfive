@@ -1,0 +1,12 @@
+@mixin screen-reader-only {
+  &:not(#sr-only-specificity-fix) {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: .1rem;
+    margin: -.1rem;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: .1rem;
+  }
+}
