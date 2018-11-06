@@ -20,11 +20,11 @@ To start using Saturn V, just import the specific stage you would like to use, e
 
 ```SCSS
 // Stage One
-@import 'saturnfive/SV-SI';
+@import 'saturnfive/stage-one';
 
 // Stage Two
-@import 'saturnfive/SV-SII';
+@import 'saturnfive/stage-two';
 
 // Stage Three
-@import 'saturnfive/SV-SIII';
+@import 'saturnfive/stage-three';
 ```
