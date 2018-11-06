@@ -4,7 +4,7 @@ $z-order:
 "example-three"
 !default;
 
-$s5_permanent-z-order: 'debug';
+$s5_permanent-z-order: 'debug', 'focusable-only';
 
 
 $s5_z-order: $s5_permanent-z-order, $z-order;
