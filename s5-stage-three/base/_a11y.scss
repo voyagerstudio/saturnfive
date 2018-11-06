@@ -1,0 +1,17 @@
+[disabled],
+[aria-disabled="true"] {
+  @include disable-text-select;
+  opacity: 0.5;
+  cursor: not-allowed;
+  text-decoration: none;
+  pointer-events: none;
+}
+
+// Hiding Elements
+[hidden] {
+  display: none;
+}
+
+[aria-hidden="true"] {
+  visibility: hidden;
+}
