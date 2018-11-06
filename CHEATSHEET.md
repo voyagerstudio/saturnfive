@@ -71,12 +71,27 @@ To override tokens, make sure you set a new value _before_ your import of Saturn
 * `s5_weight--black` - black font weight
 
 
+* `s5_line-height-xs` - x-small line-height
+* `s5_line-height-sm` - small line-height
+* `s5_line-height-md` - medium line-height
+* `s5_line-height-lg` - large line-height
+* `s5_line-height-xl` - x-large line-height
+
 * `s5_font-scale-modifier` - ratio that each font-scale step is increased by. (default is 1.125)
 * `s5_font-scale-base` - set the default base font size for the font scale. This is the lowest font size the scale will use (font-size(1);)
 * `s5_font-root-size: this is used to calculate rem based on the font-size of `html`. If you change the html font size, also change this variable.
 
 #### Base Unit Tokens
-* `s5_foundation-unit-size` - will be used for some future patterns, default is 4px.
+* `s5_foundation-unit-size` - a multiplier used by the size-multiplier mixin. This lets you create uniform units in multiples of four
+
+#### Media Queries
+* `$s5_viewport-micro` - smallest viewport size
+* `$s5_viewport-xs` - x-small viewport size
+* `$s5_viewport-sm` - small viewport size
+* `$s5_viewport-md` - medium viewport size
+* `$s5_viewport-lg` - large viewport size
+* `$s5_viewport-xl` - x-large viewport size
+* `$s5_viewport-massive` - massive viewport size
 
 #### Z-index default
 * `$z-order` - this is a list of strings that should match up with different parts of your UI. The order from first to last will assign z-index values going from highest to lowest. (essentially, top on the list is also top on the stack)
@@ -108,6 +123,33 @@ To override tokens, make sure you set a new value _before_ your import of Saturn
 
 // pow($number, $power)
 // calculates power. $number^$power, eg pow(3,3) = 27
+
+```
+
+#### Size Multiplier
+```scss
+
+// set-size($multiplier)
+// sets value as multiplier of base size (default is 4px). Also includes arguments for 'pixel' (1px) and 'micro' (2px). 
+
+// eg input
+margin-bottom: set-size(10);
+
+// output
+margin-bottom: 40px; // technically sets in rem
+
+
+```
+
+#### Debug 
+```scss
+
+// @include debug-overlay($type, $location, $opacity, $offset-x, $offset-y);
+// $type options: grid, more to come
+// $location options: local (when used as property), global (sets on html for the whole page)
+// $opacity: 0%-100%
+// offset-x: offset pixel amount on horizontal plane
+// offset-y: offset pixel amount on vertical plane
 
 ```
 
@@ -161,6 +203,9 @@ To override tokens, make sure you set a new value _before_ your import of Saturn
 
 ### Utilities
 
+#### Media Queries
+`@include min-view($size) { properties }` or `@include max-view($size) { properties }`. `$size` options include: micro, xs, sm, md, lg, xl, massive. 
+
 #### Focusable Only
 `@include focusable-only;` - Styles dom element so that it is hidden and only accessible to screen readers and to sighted users via focusing with keyboard navigation.
 
@@ -174,6 +219,9 @@ To override tokens, make sure you set a new value _before_ your import of Saturn
 // eg: @include share-px-val(margin-top, margin-left, margin-right, 10) - will add margin-top, margin-left, and margin-right properties with 10px converted to rem
 
 ```
+
+#### Screen Reader Only
+`@include screen-reader-only;` will make dom element content only accessible via a screen reader. 
 
 ---
 ### Patterns
@@ -213,3 +261,12 @@ To override tokens, make sure you set a new value _before_ your import of Saturn
 // @include interactive-shadow($step:0, $color:black, $intensity-multiplier:1, $border-radius:0, $aniamtion-speed: 75ms, $animation-type:ease-in)
 
 ```
+
+---
+## Saturn V — Stage 003
+
+### Base
+These are some base styles to establish global properties such as box-sizing.
+
+### A11y
+these styles establish the baseline for accessibility such as `ARIA-hidden` or `disabled` styling.
