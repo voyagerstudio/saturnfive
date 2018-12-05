@@ -1,0 +1,21 @@
+@mixin set-type-line-height($line-height:md) {
+  @if $line-height==xs {
+    line-height: $s5_line-height-xs;
+  }
+
+  @if $line-height==sm {
+    line-height: $s5_line-height-sm;
+  }
+
+  @if $line-height==md {
+    line-height: $s5_line-height-md;
+  }
+
+  @if $line-height==lg {
+    line-height: $s5_line-height-lg;
+  }
+
+  @if $line-height==xl {
+    line-height: $s5_line-height-xl;
+  }
+}

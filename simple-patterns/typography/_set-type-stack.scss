@@ -1,0 +1,46 @@
+@mixin set-type-stack($context:body) {
+  // Contexts
+  @if $context==body {
+    font-family: $s5_fontstack--body;
+  }
+
+  @if $context==text {
+    font-family: $s5_fontstack--body;
+  }
+
+  @else if $context==masthead {
+    font-family: $s5_fontstack--masthead;
+  }
+
+  @else if $context==display {
+    font-family: $s5_fontstack--display;
+  }
+
+  @else if $context==heading {
+    font-family: $s5_fontstack--display;
+  }
+
+  @else if $context==code {
+    font-family: $s5_fontstack--code;
+  }
+
+  @else if $context==interface {
+    font-family: $s5_fontstack--interface;
+  }
+
+  @else if $context==ui {
+    font-family: $s5_fontstack--interface;
+  }
+
+  @else if $context==caption {
+    font-family: $s5_fontstack--caption;
+  }
+
+  @else if $context==aside {
+    font-family: $s5_fontstack--aside;
+  }
+
+  @else if $context==blockquote {
+    font-family: $s5_fontstack--blockquote;
+  }
+}

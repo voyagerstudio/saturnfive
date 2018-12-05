@@ -27,8 +27,10 @@
 @import 'utilities/z-index';
 
 // Simple Patterns - simple uniform design patterns that lean on the settings established in the Stage One tokens
-// @import 'simple-patterns/typography/set-type-size';
-// @import 'simple-patterns/typography/set-type-weight';
-// @import 'simple-patterns/typography/set-type-style';
+@import 'simple-patterns/typography/set-type-size';
+@import 'simple-patterns/typography/set-type-line-height';
+@import 'simple-patterns/typography/set-type-stack';
+@import 'simple-patterns/typography/set-type-weight';
+@import 'simple-patterns/typography/set-type-style';
 @import 'simple-patterns/typography/set-type';
 @import 'simple-patterns/shadows';

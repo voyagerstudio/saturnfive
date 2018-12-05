@@ -1,0 +1,3 @@
+@mixin set-type-size($font-scale:5) {
+  font-size: font-scale($font-scale);
+}

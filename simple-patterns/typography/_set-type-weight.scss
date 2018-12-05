@@ -1,0 +1,37 @@
+@mixin set-type-weight($weight:book) {
+  @if $weight==thin {
+    font-weight: $s5_weight--thin;
+  }
+
+  @if $weight==extra-light {
+    font-weight: $s5_weight--extra-light;
+  }
+
+  @if $weight==light {
+    font-weight: $s5_weight--light;
+  }
+
+  @if $weight==book {
+    font-weight: $s5_weight--book;
+  }
+
+  @if $weight==medium {
+    font-weight: $s5_weight--medium;
+  }
+
+  @if $weight==demi-bold {
+    font-weight: $s5_weight--demi-bold;
+  }
+
+  @if $weight==bold {
+    font-weight: $s5_weight--bold;
+  }
+
+  @if $weight==heavy {
+    font-weight: $s5_weight--heavy;
+  }
+
+  @if $weight==black {
+    font-weight: $s5_weight--black;
+  }
+}
