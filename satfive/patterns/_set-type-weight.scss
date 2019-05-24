@@ -1,0 +1,3 @@
+@mixin set-type-weight($weight:book) {
+  font-weight: get-typeweight($weight);
+}

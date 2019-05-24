@@ -1,0 +1,51 @@
+@function set-color($color-input, $step:0, $opacity:100%) {
+
+  // limits the range of accepted colors to just what's in the color map
+  $color: map-get($s5_map--color, $color-input);
+
+  $opacity: (strip-unit($opacity) / 100);
+
+  $base-red: red($color);
+  $base-green: green($color);
+  $base-blue: blue($color);
+
+  // rounds steps to a whole number to eliminate decimal-placed steps
+  $step: round($step); // unsure if I should keep this
+
+  // converts total number of steps into the positive and negative amounts
+  $step-count: ($s5_color-scale-step-total - 1) / 2;
+
+  // sets up positive steps
+  @if $step>0 {
+
+    @for $i from 1 to $step-count {
+      $transformed-red: $base-red + (((255 - $base-red) / $step-count) * ($step));
+      $transformed-green: $base-green + (((255 - $base-green) / $step-count) * ($step));
+      $transformed-blue: $base-blue + (((255 - $base-blue) / $step-count) * ($step));
+
+      @return rgba($transformed-red, $transformed-green, $transformed-blue, $opacity);
+    }
+
+  }
+
+  // sets up negative steps
+  @if $step < 0 {
+    @for $i from -1 to $step-count {
+      $transformed-red: $base-red + (((0 + $base-red) / $step-count) * ($step));
+      $transformed-green: $base-green + (((0 + $base-green) / $step-count) * ($step));
+      $transformed-blue: $base-blue + (((0 + $base-blue) / $step-count) * ($step));
+
+      @return rgba($transformed-red, $transformed-green, $transformed-blue, $opacity);
+    }
+
+  }
+
+  // allows for use with not transforming a color
+  @if $step==0 {
+    $transformed-red: $base-red;
+    $transformed-green: $base-green;
+    $transformed-blue: $base-blue;
+
+    @return rgba($transformed-red, $transformed-green, $transformed-blue, $opacity);
+  }
+}

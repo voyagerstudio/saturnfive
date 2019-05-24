@@ -1,0 +1,32 @@
+@mixin standard-shadow($step:0, $color:black, $intensity-multiplier:1) {
+  box-shadow: shadow($step, $color, $intensity-multiplier);
+}
+
+@mixin interactive-shadow($step:0, $color:black, $intensity-multiplier:1, $border-radius:0, $animation-speed:75ms, $animation-type:ease-in) {
+  position: relative;
+  box-sizing: border-box;
+
+  &:after {
+    @include share-px-value(top, right, bottom, left, 0);
+    border-radius: px($border-radius);
+    box-shadow: shadow($step, $color, $intensity-multiplier);
+    content: '';
+    opacity: 0;
+    position: absolute;
+    transition: opacity $animation-speed $animation-type;
+  }
+
+  &:focus,
+  &:hover {
+
+    &:after {
+      opacity: 1;
+    }
+  }
+
+  &:active {
+    &:after {
+      opacity: 0;
+    }
+  }
+}

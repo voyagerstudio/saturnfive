@@ -1,0 +1,13 @@
+@mixin set-type-style($style:normal) {
+  @if $style==normal {
+    font-style: normal;
+  }
+
+  @else if $style==italic {
+    font-style: italic;
+  }
+
+  @else if $style==oblique {
+    font-style: oblique;
+  }
+}

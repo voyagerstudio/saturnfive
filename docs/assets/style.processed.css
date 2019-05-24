@@ -1,0 +1,42 @@
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+[disabled],
+[aria-disabled="true"] {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  opacity: 0.5;
+  cursor: not-allowed;
+  text-decoration: none;
+  pointer-events: none;
+}
+
+[hidden] {
+  display: none;
+}
+
+[aria-hidden="true"] {
+  visibility: hidden;
+}
+
+h2 {
+  color: #ffc355;
+}
+
+@media screen and (max-width: 1024px) {
+  h2 {
+    color: #55aa55;
+  }
+}

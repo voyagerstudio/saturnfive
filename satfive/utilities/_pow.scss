@@ -1,0 +1,20 @@
+// Power Function
+// via - https://www.bhalash.com/archives/13544805657
+
+@function pow($number, $power) {
+  $exponent: 1;
+
+  @if $power>0 {
+    @for $i from 1 through $power {
+      $exponent: $exponent * $number;
+    }
+  }
+
+  @else if $power < 0 {
+    @for $i from 1 through $power {
+      $exponent: $exponent / $number;
+    }
+  }
+
+  @return $exponent;
+}
