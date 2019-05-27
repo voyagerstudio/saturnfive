@@ -7,4 +7,8 @@
   @include min-width-viewport(massive) {
     width: 30%;
   }
+
+  @include dark-mode {
+    background-color: get-color(black);
+  }
 }

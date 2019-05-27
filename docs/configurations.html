@@ -28,8 +28,9 @@
         <p class="type-intro__description">This is the complete list of variables that power Saturn V along with their default values and descriptions.
         </p>
       </section>
-      <section class="config">
-        <h3 class="section-heading">base units</h3>
+      <section class="content-section config">
+        <h3 class="section-heading" id="config--base-units">base units</h3>
+        <p class="section-description">foundational variables that dictate base units in Saturn V</p>
         <table>
           <caption>A table documenting the base unit Variables in Saturn V</caption>
           <thead>
@@ -43,7 +44,277 @@
             <tr>
               <td><code>$s5_foundation-unit-size</code></td>
               <td><code>4px</code></td>
-              <td>The default value used as a multiplier for various sizing</td>
+              <td>The default value used as a multiplier in the <code>size-multiplier()</code> function.</td>
+            </tr>
+            <tr>
+              <td><code>$s5_color-scale-step-total</code></td>
+              <td>19</td>
+              <td>This controls how many additional lighter and darker colors get generated. This must be an odd number. 19 color steps means there is 1 base and 9 darker/lighter options.</td>
+            </tr>
+            <tr>
+              <td><code>$s5_type-scale-modifier</code></td>
+              <td>1.125</td>
+              <td>This controls how much each type size increases</td>
+            </tr>
+            <tr>
+              <td><code>$s5_type-scale-base</code></td>
+              <td>10px</td>
+              <td>This controls what the starting (and smallest) type scale size is.</td>
+            </tr>
+            <tr>
+              <td><code>$s5_type-root-size</code></td>
+              <td>16px</td>
+              <td>This keeps the math accurate for determining rem sizes. If you change the font-size for the <code>html</code> property, you should change this variable also.</td>
+            </tr>
+            <tr>
+              <td><code>$s5_zindex-order</code></td>
+              <td>"example-one", "example-two", "example-three"</td>
+              <td>This auto-sets z-index values depending on the order in this list. This is used by the <code>zindex()</code> mixin.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section class="content-section config">
+        <h3 class="section-heading" id="config--color">Color</h3>
+        <p class="section-description">foundational variables that dictate base units in Saturn V</p>
+        <table>
+          <caption>A table documenting the base unit Variables in Saturn V</caption>
+          <thead>
+            <tr>
+              <th scope="col">Variable</th>
+              <th scope="col">Default Value</th>
+              <th scope="col">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>$s5_color-brand-color-1</code></td>
+              <td><code>#9C75F3</code></td>
+              <td>The default brand color. you can access via <code>get-color(primary)</code>.</td>
+            </tr>
+            <tr>
+              <td><code>$s5_color-brand-color-2</code></td>
+              <td><code>mediumblue</code></td>
+              <td>The secondary brand color. you can access via <code>get-color(secondary)</code>.</td>
+            </tr>
+            <tr>
+              <td><code>$s5_color-brand-color-3</code></td>
+              <td><code>#a10000</code></td>
+              <td>The tertiary brand color. you can access via <code>get-color(tertiary)</code>.</td>
+            </tr>
+            <tr>
+              <td><code>$s5_color-soft-white</code></td>
+              <td><code>#FAFCFC</code></td>
+              <td>a soft grey that's light enough to use as an alternative to white. you can access via
+                <code>get-color(soft-white)</code>.</td>
+            </tr>
+            <tr>
+              <td><code>$s5_color-soft-black</code></td>
+              <td><code>#0D0C0C</code></td>
+              <td>a dark grey that's dark enough to use as an alternative to black. you can access via
+                <code>get-color(soft-black)</code>.</td>
+            </tr>
+            <tr>
+              <td><code>$s5_color-focus-base</code></td>
+              <td><code>#002eff</code></td>
+              <td>a color that is used for UI elements that are being focused. you can access via
+                <code>get-color(focus)</code>.</td>
+            </tr>
+            <tr>
+              <td><code>$s5_color-info-base</code></td>
+              <td><code>#002eff</code></td>
+              <td>a color that is used for UI elements that represent info. you can access via
+                <code>get-color(info)</code>.</td>
+            </tr>
+            <tr>
+              <td><code>$s5_color-alert-base</code></td>
+              <td><code>gold</code></td>
+              <td>a color that is used for UI elements that represent alerts. you can access via
+                <code>get-color(alert)</code>.</td>
+            </tr>
+            <tr>
+              <td><code>$s5_color-warning-base</code></td>
+              <td><code>#f14400</code></td>
+              <td>a color that is used for UI elements that represent warnings. you can access via
+                <code>get-color(warning)</code>.</td>
+            </tr>
+            <tr>
+              <td><code>$s5_color-danger-base</code></td>
+              <td><code>#dc1414</code></td>
+              <td>a color that is used for UI elements that represent danger. you can access via
+                <code>get-color(danger)</code>.</td>
+            </tr>
+            <tr>
+              <td><code>$s5_color-success-base</code></td>
+              <td><code>#1aaa35</code></td>
+              <td>a color that is used for UI elements that represent success. you can access via
+                <code>get-color(success)</code>.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section class="content-section config">
+        <h3 class="section-heading" id="config--media-queries">media-queries</h3>
+        <p class="section-description">viewport breakpoints for adaptive layouts</p>
+        <table>
+          <caption>A table documenting the base unit Variables in Saturn V</caption>
+          <thead>
+            <tr>
+              <th scope="col">Variable</th>
+              <th scope="col">Default Value</th>
+              <th scope="col">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>$s5_viewport-micro</code></td>
+              <td><code>320px</code></td>
+              <td>the smallest viewport size</td>
+            </tr>
+            <tr>
+              <td><code>$s5_viewport-xs</code></td>
+              <td><code>640px</code></td>
+              <td>the "extra-small" viewport size</td>
+            </tr>
+            <tr>
+              <td><code>$s5_viewport-sm</code></td>
+              <td><code>768px</code></td>
+              <td>the "small" viewport size</td>
+            </tr>
+            <tr>
+              <td><code>$s5_viewport-md</code></td>
+              <td><code>1024px</code></td>
+              <td>the "medium" viewport size</td>
+            </tr>
+            <tr>
+              <td><code>$s5_viewport-lg</code></td>
+              <td><code>1440px</code></td>
+              <td>the "large" viewport size</td>
+            </tr>
+            <tr>
+              <td><code>$s5_viewport-xl</code></td>
+              <td><code>1600px</code></td>
+              <td>the "extra-large" viewport size</td>
+            </tr>
+            <tr>
+              <td><code>$s5_viewport-massive</code></td>
+              <td><code>2200px</code></td>
+              <td>the "massive" viewport size</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section class="content-section config">
+        <h3 class="section-heading" id="config--type-stacks">Type-Stacks</h3>
+        <p class="section-description">the various sets of Type families and fallbacks for different contexts.</p>
+        <table>
+          <caption>A table documenting the base unit Variables in Saturn V</caption>
+          <thead>
+            <tr>
+              <th scope="col">Variable</th>
+              <th scope="col">Default Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>$s5_typestack--monospace</code></td>
+              <td><code>"Andale Mono", AndaleMono, monospace</code></td>
+            </tr>
+            <tr>
+              <td><code>$s5_typestack--sans-serif</code></td>
+              <td><code>sans-serif</code></td>
+            </tr>
+            <tr>
+              <td><code>$s5_typestack--serif</code></td>
+              <td><code>serif</code></td>
+            </tr>
+            <tr>
+              <td><code>$s5_typestack--display</code></td>
+              <td><code>BlinkMacSystemFont,-apple-system,"Roboto","Droid Sans","Segoe UI","Helvetica
+                  Neue",Helvetica,Arial,sans-serif</code></td>
+            </tr>
+            <tr>
+              <td><code>$s5_typestack--masthead</code></td>
+              <td><code>$s5_typestack--display</code></td>
+            </tr>
+            <tr>
+              <td><code>$s5_typestack--body</code></td>
+              <td><code>$s5_typestack--display</code></td>
+            </tr>
+            <tr>
+              <td><code>$s5_typestack--text</code></td>
+              <td><code>$s5_typestack--body</code></td>
+            </tr>
+            <tr>
+              <td><code>$s5_typestack--code</code></td>
+              <td><code>$s5_typestack--monospace</code></td>
+            </tr>
+            <tr>
+              <td><code>$s5_typestack--interface</code></td>
+              <td><code>$s5_typestack--display</code></td>
+            </tr>
+            <tr>
+              <td><code>$s5_typestack--caption</code></td>
+              <td><code>$s5_typestack--display</code></td>
+            </tr>
+            <tr>
+              <td><code>$s5_typestack--aside</code></td>
+              <td><code>$s5_typestack--display</code></td>
+            </tr>
+            <tr>
+              <td><code>$s5_typestack--blockquote</code></td>
+              <td><code>$s5_typestack--display</code></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section class="content-section config">
+        <h3 class="section-heading" id="config--type-weight">Type-Weights</h3>
+        <p class="section-description">various type-weights.</p>
+        <table>
+          <caption>A table documenting the base unit Variables in Saturn V</caption>
+          <thead>
+            <tr>
+              <th scope="col">Variable</th>
+              <th scope="col">Default Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>$s5_weight--thin</code></td>
+              <td><code>100</code></td>
+            </tr>
+            <tr>
+              <td><code>$s5_weight--extra-light</code></td>
+              <td><code>200</code></td>
+            </tr>
+            <tr>
+              <td><code>$s5_weight--light</code></td>
+              <td><code>300</code></td>
+            </tr>
+            <tr>
+              <td><code>$s5_weight--book</code></td>
+              <td><code>400</code></td>
+            </tr>
+            <tr>
+              <td><code>$s5_weight--medium</code></td>
+              <td><code>500</code></td>
+            </tr>
+            <tr>
+              <td><code>$s5_weight--demi-bold</code></td>
+              <td><code>600</code></td>
+            </tr>
+            <tr>
+              <td><code>$s5_weight--bold</code></td>
+              <td><code>700</code></td>
+            </tr>
+            <tr>
+              <td><code>$s5_weight--heavy</code></td>
+              <td><code>800</code></td>
+            </tr>
+            <tr>
+              <td><code>$s5_weight--black</code></td>
+              <td><code>900</code></td>
             </tr>
           </tbody>
         </table>

@@ -42,6 +42,10 @@
   border-bottom: set-size(pixel) solid get-color(grey, 7);
   display: block;
   margin-bottom: set-size(20);
+
+  @include dark-mode {
+    border-bottom-color: get-color(black);
+  }
 }
 
 .header-nav {
@@ -88,6 +92,10 @@
   position: relative;
   padding: set-size(micro);
   transition: color 100ms ease;
+
+  @include dark-mode {
+    color: get-color(white, 0, 60);
+  }
   
   &:after {
     width: 100%;
@@ -95,7 +103,6 @@
     bottom: 0;
     height: set-size(micro);
     content: '';
-    background-color: red;
     background: linear-gradient(to right, get-color(orange, 4), get-color(pink, -1));
     display: block;
     transform: scaleX(0);
@@ -106,6 +113,10 @@
   &:focus,
   &:hover {
     color: get-color(black);
+
+    @include dark-mode {
+      color: get-color(white);
+    }
 
     &:after {
       opacity: 1;

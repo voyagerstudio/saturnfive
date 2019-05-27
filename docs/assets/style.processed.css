@@ -3,8 +3,7 @@ body {
   box-sizing: border-box;
   font-size: 100%;
   margin: 0;
-  padding: 0;
-  background-color: red !important; }
+  padding: 0; }
 
 *,
 *:before,
@@ -33,17 +32,23 @@ body {
 .wrapper {
   width: 100%;
   display: flex;
-  height: 100vh;
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  overflow-y: none;
+  min-height: 100vh; }
 
 .content-wrapper {
   background-color: white;
   padding: 0.5rem 12.5rem;
-  width: calc(100% - 25rem); }
+  width: calc(100% - 25rem);
+  overflow-y: scroll; }
   @media screen and (min-width: 2200px) {
     .content-wrapper {
       width: 70%; } }
+  @media (prefers-color-scheme: dark) {
+    .content-wrapper {
+      background-color: #1c1c1c;
+      color: white; } }
 
 @keyframes heading-kaleidoscope {
   0% {
@@ -70,6 +75,9 @@ body {
   border-bottom: 0.0625rem solid #e3e3e3;
   display: block;
   margin-bottom: 5rem; }
+  @media (prefers-color-scheme: dark) {
+    .header {
+      border-bottom-color: black; } }
 
 .header-nav {
   display: flex;
@@ -118,13 +126,15 @@ body {
   position: relative;
   padding: 0.125rem;
   transition: color 100ms ease; }
+  @media (prefers-color-scheme: dark) {
+    .header-nav__anchor {
+      color: rgba(255, 255, 255, 0.6); } }
   .header-nav__anchor:after {
     width: 100%;
     position: relative;
     bottom: 0;
     height: 0.125rem;
     content: '';
-    background-color: red;
     background: linear-gradient(to right, #ffcd71, #e3abb4);
     display: block;
     transform: scaleX(0);
@@ -132,6 +142,9 @@ body {
     opacity: 0; }
   .header-nav__anchor:focus, .header-nav__anchor:hover {
     color: black; }
+    @media (prefers-color-scheme: dark) {
+      .header-nav__anchor:focus, .header-nav__anchor:hover {
+        color: white; } }
     .header-nav__anchor:focus:after, .header-nav__anchor:hover:after {
       opacity: 1;
       transform: scaleX(1); }
@@ -144,6 +157,9 @@ body {
   @media screen and (min-width: 2200px) {
     .sidebar {
       width: 30%; } }
+  @media (prefers-color-scheme: dark) {
+    .sidebar {
+      background-color: black; } }
 
 .type-intro__heading {
   font-size: 4.6288477772rem;
@@ -162,12 +178,78 @@ body {
   max-width: 50rem;
   padding-bottom: 12.5rem;
   border-bottom: 0.0625rem solid #e3e3e3; }
+  @media (prefers-color-scheme: dark) {
+    .type-intro__description {
+      border-bottom-color: black; } }
 
 .section-heading {
   font-size: 3.6573612067rem;
   font-family: BlinkMacSystemFont, -apple-system, "Roboto", "Droid Sans", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 100;
+  font-weight: 300;
+  line-height: 1.6;
+  font-style: normal;
+  line-height: 1; }
+
+.section-description {
+  font-size: 1.4254358411rem;
+  font-family: BlinkMacSystemFont, -apple-system, "Roboto", "Droid Sans", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
   line-height: 1.6;
   font-style: normal; }
+
+.content-section {
+  margin-bottom: 12.5rem;
+  display: block; }
+
+table {
+  border-collapse: collapse;
+  width: 100%; }
+
+table caption:not(#sr-only-specificity-fix) {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: .1rem;
+  margin: -.1rem;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: .1rem; }
+
+tr th {
+  font-size: 1.0011291504rem;
+  font-family: BlinkMacSystemFont, -apple-system, "Roboto", "Droid Sans", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  line-height: 1.6;
+  font-style: normal;
+  text-align: left; }
+  tr th th + th {
+    margin-left: 2.5rem; }
+
+thead {
+  border-bottom: 0.125rem solid #e3e3e3; }
+  @media (prefers-color-scheme: dark) {
+    thead {
+      border-bottom-color: black; } }
+
+td {
+  font-size: 1.0011291504rem;
+  font-family: BlinkMacSystemFont, -apple-system, "Roboto", "Droid Sans", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  font-style: normal;
+  padding: 0.5rem; }
+
+td code {
+  font-size: 1.0011291504rem;
+  font-family: "Andale Mono", AndaleMono, monospace;
+  font-weight: 400;
+  line-height: 1.6;
+  font-style: normal; }
+
+tr:nth-of-type(2n) {
+  background-color: #f1f1f1; }
+  @media (prefers-color-scheme: dark) {
+    tr:nth-of-type(2n) {
+      background-color: #0e0e0e; } }
 
 /*# sourceMappingURL=style.processed.css.map */
