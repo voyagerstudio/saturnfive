@@ -1,4 +1,4 @@
-@function set-color($color-input, $step:0, $opacity:100%) {
+@function get-color($color-input, $step:0, $opacity:100%) {
 
   // limits the range of accepted colors to just what's in the color map
   $color: map-get($s5_map--color, $color-input);

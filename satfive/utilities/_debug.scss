@@ -5,6 +5,7 @@ $s5_debug-tool--500grid: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfUAAAH1
 
   @if $location=='global' {
     html:after {
+      @include zindex(debug);
       content: '';
       background-image: url($s5_debug-tool--500grid);
       position: absolute;
@@ -13,19 +14,19 @@ $s5_debug-tool--500grid: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfUAAAH1
       right: 0;
       bottom: 0;
       opacity: $opacity;
-      z-index: z-index-output(debug);
     }
   }
-
+  
   @if $location=='local' {
     $self: &;
-
+    
     & {
       position: relative;
     }
-
+    
     &:after {
       content: '';
+      @include zindex(debug);
       background-image: url($s5_debug-tool--500grid);
       position: absolute;
       top: $offset-y;
@@ -34,7 +35,6 @@ $s5_debug-tool--500grid: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfUAAAH1
       bottom: 0;
       opacity: $opacity;
       mix-blend-mode: exclusion;
-      z-index: z-index-output(debug);
     }
   }
 }
