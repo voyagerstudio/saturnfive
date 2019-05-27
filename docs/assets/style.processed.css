@@ -1,13 +1,11 @@
 html {
   box-sizing: border-box;
-  font-size: 100%;
-}
+  font-size: 100%; }
 
 *,
 *:before,
 *:after {
-  box-sizing: inherit;
-}
+  box-sizing: inherit; }
 
 [disabled],
 [aria-disabled="true"] {
@@ -20,23 +18,18 @@ html {
   opacity: 0.5;
   cursor: not-allowed;
   text-decoration: none;
-  pointer-events: none;
-}
+  pointer-events: none; }
 
 [hidden] {
-  display: none;
-}
+  display: none; }
 
 [aria-hidden="true"] {
-  visibility: hidden;
-}
+  visibility: hidden; }
 
 h2 {
-  color: #ffc355;
-}
+  color: #ffc355; }
+  @media screen and (max-width: 1024px) {
+    h2 {
+      color: #55aa55; } }
 
-@media screen and (max-width: 1024px) {
-  h2 {
-    color: #55aa55;
-  }
-}
+/*# sourceMappingURL=style.processed.css.map */
