@@ -1,6 +1,10 @@
-html {
+html,
+body {
   box-sizing: border-box;
-  font-size: 100%; }
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: red !important; }
 
 *,
 *:before,
@@ -26,10 +30,144 @@ html {
 [aria-hidden="true"] {
   visibility: hidden; }
 
-h2 {
-  color: #ffc355; }
-  @media screen and (max-width: 1024px) {
-    h2 {
-      color: #55aa55; } }
+.wrapper {
+  width: 100%;
+  display: flex;
+  height: 100vh;
+  padding: 0;
+  margin: 0; }
+
+.content-wrapper {
+  background-color: white;
+  padding: 0.5rem 12.5rem;
+  width: calc(100% - 25rem); }
+  @media screen and (min-width: 2200px) {
+    .content-wrapper {
+      width: 70%; } }
+
+@keyframes heading-kaleidoscope {
+  0% {
+    color: red; }
+  10% {
+    color: orange; }
+  20% {
+    color: goldenrod; }
+  30% {
+    color: yellowgreen; }
+  40% {
+    color: green; }
+  50% {
+    color: teal; }
+  60% {
+    color: blue; }
+  70% {
+    color: violet; }
+  80% {
+    color: pink; }
+  100% {
+    color: red; } }
+.header {
+  border-bottom: 0.0625rem solid #e3e3e3;
+  display: block;
+  margin-bottom: 5rem; }
+
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.header-heading {
+  font-size: 1.8040672364rem;
+  font-family: BlinkMacSystemFont, -apple-system, "Roboto", "Droid Sans", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  line-height: 1.6;
+  font-style: normal; }
+
+.header-anchor {
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+  animation-name: heading-kaleidoscope;
+  animation-iteration-count: infinite;
+  animation-duration: 60s;
+  text-decoration: none;
+  padding: 0.5rem;
+  margin-left: -0.5rem; }
+  .header-anchor:focus, .header-anchor:hover {
+    background-color: papayawhip; }
+
+.header-nav__list {
+  list-style-type: none;
+  padding: 0; }
+
+.header-nav__list-item {
+  display: inline-flex; }
+  .header-nav__list-item + .header-nav__list-item {
+    margin-left: 2.5rem; }
+
+.header-nav__anchor {
+  font-size: 1.0011291504rem;
+  font-family: BlinkMacSystemFont, -apple-system, "Roboto", "Droid Sans", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  font-style: normal;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.4);
+  text-transform: uppercase;
+  position: relative;
+  padding: 0.125rem;
+  transition: color 100ms ease; }
+  .header-nav__anchor:after {
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    height: 0.125rem;
+    content: '';
+    background-color: red;
+    background: linear-gradient(to right, #ffcd71, #e3abb4);
+    display: block;
+    transform: scaleX(0);
+    transition: opacity 100ms ease, transform 150ms ease-in;
+    opacity: 0; }
+  .header-nav__anchor:focus, .header-nav__anchor:hover {
+    color: black; }
+    .header-nav__anchor:focus:after, .header-nav__anchor:hover:after {
+      opacity: 1;
+      transform: scaleX(1); }
+
+.sidebar {
+  background-color: #f1f1f1;
+  content: '';
+  display: block;
+  width: 25rem; }
+  @media screen and (min-width: 2200px) {
+    .sidebar {
+      width: 30%; } }
+
+.type-intro__heading {
+  font-size: 4.6288477772rem;
+  font-family: BlinkMacSystemFont, -apple-system, "Roboto", "Droid Sans", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  line-height: 1.6;
+  font-style: normal;
+  line-height: 1; }
+
+.type-intro__description {
+  font-size: 1.8040672364rem;
+  font-family: BlinkMacSystemFont, -apple-system, "Roboto", "Droid Sans", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  font-style: normal;
+  max-width: 50rem;
+  padding-bottom: 12.5rem;
+  border-bottom: 0.0625rem solid #e3e3e3; }
+
+.section-heading {
+  font-size: 3.6573612067rem;
+  font-family: BlinkMacSystemFont, -apple-system, "Roboto", "Droid Sans", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 100;
+  line-height: 1.6;
+  font-style: normal; }
 
 /*# sourceMappingURL=style.processed.css.map */

@@ -1,10 +1,5 @@
 @import '../../satfive.scss';
-
-
-h2 {
-  color: get-color(orange, 3);
-  
-  @include max-width-viewport(md) {
-    color: get-color(green, 3);
-  }
-}
+@import 'styles/base';
+@import 'styles/header';
+@import 'styles/sidebar';
+@import 'styles/sections';
