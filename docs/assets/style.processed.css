@@ -104,6 +104,9 @@ body {
   margin-left: -0.5rem; }
   .header-anchor:focus, .header-anchor:hover {
     background-color: papayawhip; }
+    @media (prefers-color-scheme: dark) {
+      .header-anchor:focus, .header-anchor:hover {
+        background-color: #1c0000; } }
 
 .header-nav__list {
   list-style-type: none;

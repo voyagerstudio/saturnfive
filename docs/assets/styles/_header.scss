@@ -68,6 +68,10 @@
   &:focus,
   &:hover {
     background-color: papayawhip;
+
+    @include dark-mode {
+      background-color: get-color(red, -8);
+    }
   }
 }
 
