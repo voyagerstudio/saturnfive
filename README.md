@@ -1,5 +1,5 @@
 # Saturn V Documentation 
-> A design system springboard with three distinct levels of fidelity and opinionated code.
+> A SASS powered springboard for styling the web.
 
 ## Quick Facts:
 * **Saturn V is not a bootstrap competitor.** Saturn V is built with the intention of writing easier/faster CSS, not avoiding the task altogether (not that I'm knocking bootstrap _at all_). The most complex component you'll see in Saturn V for example is styling buttons.
