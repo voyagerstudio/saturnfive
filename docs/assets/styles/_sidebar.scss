@@ -1,0 +1,14 @@
+.sidebar {
+  background-color: get-color(grey, 8);
+  content: '';
+  display: block;
+  width: set-size(100);
+
+  @include min-width-viewport(massive) {
+    width: 30%;
+  }
+
+  @include dark-mode {
+    background-color: get-color(black);
+  }
+}

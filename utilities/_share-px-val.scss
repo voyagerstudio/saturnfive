@@ -1,7 +1,0 @@
-@mixin share-px-value($props...) {
-  $rem-val: px(nth($props, -1));
-
-  @for $i from 1 to length($props) {
-    #{nth($props, $i)}: $rem-val;
-  }
-}

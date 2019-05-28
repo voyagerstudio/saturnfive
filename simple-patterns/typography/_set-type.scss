@@ -1,8 +1,0 @@
-// Set type function
-@mixin set-type($type-stack:body, $font-scale:5, $weight:book, $line-height:md, $style:normal) {
-  @include set-type-size($font-scale);
-  @include set-type-stack($type-stack);
-  @include set-type-weight($weight);
-  @include set-type-line-height($line-height);
-  @include set-type-style($style);
-}

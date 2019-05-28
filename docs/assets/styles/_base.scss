@@ -1,0 +1,24 @@
+.wrapper {
+  width: 100%;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  overflow-y: none;
+  min-height: 100vh;
+}
+
+.content-wrapper {
+  background-color: get-color(white);
+  padding: set-size(2) set-size(50);
+  width: calc(100% - #{set-size(100)});
+  overflow-y: scroll;
+
+  @include min-width-viewport(massive) {
+    width: 70%;
+  }
+
+  @include dark-mode {
+    background-color: get-color(black, 1);
+    color: get-color(white);
+  }
+}

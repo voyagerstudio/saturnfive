@@ -1,0 +1,29 @@
+.type-intro__heading {
+  @include set-type(display, 18, medium);
+  @include set-type-line-height(xxs);
+}
+
+.type-intro__description {
+  @include set-type(body, 10);
+  max-width: set-size(200);
+  padding-bottom: set-size(50);
+  border-bottom: set-size(pixel) solid get-color(grey, 7);
+
+  @include dark-mode {
+    border-bottom-color: get-color(black);
+  }
+}
+
+.section-heading {
+  @include set-type(display, 16, light);
+  @include set-type-line-height(xxs);
+}
+
+.section-description {
+  @include set-type(text, 8);
+}
+
+.content-section {
+  margin-bottom: set-size(50);
+  display: block;
+}
