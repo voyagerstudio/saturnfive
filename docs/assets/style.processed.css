@@ -273,11 +273,12 @@ body {
   .nav__list-anchor--heading:after,
   .nav__list-anchor:after {
     position: absolute;
-    right: -1.75rem;
+    right: -1rem;
     content: '\2192';
     display: inline-block;
     opacity: 0;
-    transition: opacity 75ms ease-in; }
+    transform: translateX(0);
+    transition: transform 200ms ease-in-out, opacity 75ms ease-in; }
   .nav__list-anchor--heading:focus, .nav__list-anchor--heading:hover,
   .nav__list-anchor:focus,
   .nav__list-anchor:hover {
@@ -286,7 +287,8 @@ body {
     .nav__list-anchor--heading:focus:after, .nav__list-anchor--heading:hover:after,
     .nav__list-anchor:focus:after,
     .nav__list-anchor:hover:after {
-      opacity: 1; }
+      opacity: 1;
+      transform: translateX(1.25rem); }
   .nav__list-anchor--heading:focus,
   .nav__list-anchor:focus {
     outline: none !important;

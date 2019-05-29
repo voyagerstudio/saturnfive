@@ -77,11 +77,12 @@
 
   &:after {
     position: absolute;
-    right: set-px(-28);
+    right: set-px(-16);
     content: '\2192';
     display: inline-block;
     opacity: 0;
-    transition: opacity 75ms ease-in;
+    transform: translateX(0);
+    transition: transform 200ms ease-in-out, opacity 75ms ease-in;
   }
 
   &:focus,
@@ -91,6 +92,7 @@
 
     &:after {
       opacity: 1;
+      transform: translateX(set-size(5));
     }
   }
 
