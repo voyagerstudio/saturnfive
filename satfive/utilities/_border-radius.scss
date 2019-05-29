@@ -2,6 +2,8 @@
   $radii: strip-unit($radii);
   $radii: set-px($radii);
   
+  background-clip: padding-box;
+  
   @if str-index($radii-location, 'top-right') {
     border-top-right-radius: $radii;
   }
