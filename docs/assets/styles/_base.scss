@@ -35,6 +35,6 @@
 
 .skip-link {
   @include min-width-viewport(md) {
-    @include focusable-only;
+    @include screen-reader-only;
   }
 }

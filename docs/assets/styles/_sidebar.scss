@@ -75,14 +75,14 @@
   padding: set-size(1) set-size(2);
   @include border-radius(4);
 
-  &:after {
+  & .nav__anchor-arrow {
     position: absolute;
     right: set-px(-16);
-    content: '\2192';
     display: inline-block;
-    opacity: 0;
+    // opacity: 0;
     transform: translateX(0);
     transition: transform 200ms ease-in-out, opacity 75ms ease-in;
+    outline: 1px solid red;
   }
 
   &:focus,
@@ -90,7 +90,7 @@
     transform: translatex(set-size(3));
     color: get-color(primary);
 
-    &:after {
+    & .nav__anchor-arrow {
       opacity: 1;
       transform: translateX(set-size(5));
     }
@@ -113,4 +113,8 @@
 
 .nav__list-anchor {
   color: get-color(black, 5);
+}
+
+.sr-only {
+  @include screen-reader-only;
 }

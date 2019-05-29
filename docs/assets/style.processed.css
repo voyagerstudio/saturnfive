@@ -59,21 +59,32 @@ body {
 
 @media screen and (min-width: 1024px) {
   .skip-link:not(#specificity-override) {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    padding: 0;
     border: 0;
-    clip: rect(0 0 0 0);
-    overflow: hidden; }
-    .skip-link:not(#specificity-override):active, .skip-link:not(#specificity-override):focus {
-      z-index: 4;
-      width: auto;
-      height: auto;
-      margin: 0;
-      clip: auto;
-      overflow: visible; } }
+    clip: rect(1px, 1px, 1px, 1px) !important;
+    -webkit-clip-path: inset(50%) !important;
+    clip-path: inset(50%) !important;
+    height: .1rem;
+    margin: -.1rem;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: .1rem;
+    display: inline-block;
+    left: -10000000px;
+    white-space: nowrap;
+    clip: rect(1px, 1px, 1px, 1px) !important;
+    /* 1 */
+    -webkit-clip-path: inset(50%) !important;
+    clip-path: inset(50%) !important;
+    /* 2 */
+    height: 1px !important;
+    left: -1px;
+    overflow: hidden !important;
+    margin: -1px !important;
+    padding: 0 !important;
+    position: absolute !important;
+    width: 1px !important;
+    white-space: nowrap !important; } }
 
 @keyframes heading-kaleidoscope {
   0% {
@@ -270,23 +281,22 @@ body {
   border-bottom-right-radius: 0.25rem;
   border-top-left-radius: 0.25rem;
   border-bottom-left-radius: 0.25rem; }
-  .nav__list-anchor--heading:after,
-  .nav__list-anchor:after {
+  .nav__list-anchor--heading .nav__anchor-arrow,
+  .nav__list-anchor .nav__anchor-arrow {
     position: absolute;
     right: -1rem;
-    content: '\2192';
     display: inline-block;
-    opacity: 0;
     transform: translateX(0);
-    transition: transform 200ms ease-in-out, opacity 75ms ease-in; }
+    transition: transform 200ms ease-in-out, opacity 75ms ease-in;
+    outline: 1px solid red; }
   .nav__list-anchor--heading:focus, .nav__list-anchor--heading:hover,
   .nav__list-anchor:focus,
   .nav__list-anchor:hover {
     transform: translatex(0.75rem);
     color: #9c75f3; }
-    .nav__list-anchor--heading:focus:after, .nav__list-anchor--heading:hover:after,
-    .nav__list-anchor:focus:after,
-    .nav__list-anchor:hover:after {
+    .nav__list-anchor--heading:focus .nav__anchor-arrow, .nav__list-anchor--heading:hover .nav__anchor-arrow,
+    .nav__list-anchor:focus .nav__anchor-arrow,
+    .nav__list-anchor:hover .nav__anchor-arrow {
       opacity: 1;
       transform: translateX(1.25rem); }
   .nav__list-anchor--heading:focus,
@@ -304,6 +314,34 @@ body {
 
 .nav__list-anchor {
   color: #8e8e8e; }
+
+.sr-only:not(#specificity-override) {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  height: .1rem;
+  margin: -.1rem;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: .1rem;
+  display: inline-block;
+  left: -10000000px;
+  white-space: nowrap;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  /* 1 */
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  /* 2 */
+  height: 1px !important;
+  left: -1px;
+  overflow: hidden !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important; }
 
 .type-intro__heading {
   font-size: 4.6288477772rem;
@@ -351,13 +389,31 @@ table {
 
 table caption:not(#specificity-override) {
   border: 0;
-  clip: rect(0, 0, 0, 0);
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
   height: .1rem;
   margin: -.1rem;
   overflow: hidden;
   padding: 0;
   position: absolute;
-  width: .1rem; }
+  width: .1rem;
+  display: inline-block;
+  left: -10000000px;
+  white-space: nowrap;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  /* 1 */
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  /* 2 */
+  height: 1px !important;
+  left: -1px;
+  overflow: hidden !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important; }
 
 tr th {
   font-size: 1.0011291504rem;
