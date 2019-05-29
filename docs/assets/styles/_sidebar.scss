@@ -60,7 +60,7 @@
     margin-top: set-size(10);
 
     & .nav__list .nav__list-item {
-      margin-top: set-size(2);
+      margin-top: set-size(1);
     }
 }
 
@@ -69,6 +69,35 @@
   @include set-type(display, 6, book);
   text-decoration: none;
   color: get-color(black);
+  transform: translateX(0);
+  transition: transform 150ms ease, color 75ms ease;
+  display: inline-block;
+  padding: set-size(1) set-size(2);
+  @include border-radius(4);
+
+  &:after {
+    position: absolute;
+    right: set-px(-28);
+    content: '\2192';
+    display: inline-block;
+    opacity: 0;
+    transition: opacity 75ms ease-in;
+  }
+
+  &:focus,
+  &:hover {
+    transform: translatex(set-size(3));
+    color: get-color(primary);
+
+    &:after {
+      opacity: 1;
+    }
+  }
+
+  &:focus {
+    outline: none !important    ;
+    background-color: get-color(primary, 0, 25)
+  }
 
   @include dark-mode {
     color: get-color(white);

@@ -251,7 +251,7 @@ body {
 .nav_wrapper > .nav__list > .nav__list-item {
   margin-top: 2.5rem; }
   .nav_wrapper > .nav__list > .nav__list-item .nav__list .nav__list-item {
-    margin-top: 0.5rem; }
+    margin-top: 0.25rem; }
 
 .nav__list-anchor--heading,
 .nav__list-anchor {
@@ -261,7 +261,36 @@ body {
   line-height: 1.6;
   font-style: normal;
   text-decoration: none;
-  color: black; }
+  color: black;
+  transform: translateX(0);
+  transition: transform 150ms ease, color 75ms ease;
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem; }
+  .nav__list-anchor--heading:after,
+  .nav__list-anchor:after {
+    position: absolute;
+    right: -1.75rem;
+    content: '\2192';
+    display: inline-block;
+    opacity: 0;
+    transition: opacity 75ms ease-in; }
+  .nav__list-anchor--heading:focus, .nav__list-anchor--heading:hover,
+  .nav__list-anchor:focus,
+  .nav__list-anchor:hover {
+    transform: translatex(0.75rem);
+    color: #9c75f3; }
+    .nav__list-anchor--heading:focus:after, .nav__list-anchor--heading:hover:after,
+    .nav__list-anchor:focus:after,
+    .nav__list-anchor:hover:after {
+      opacity: 1; }
+  .nav__list-anchor--heading:focus,
+  .nav__list-anchor:focus {
+    outline: none !important;
+    background-color: rgba(156, 117, 243, 0.25); }
   @media (prefers-color-scheme: dark) {
     .nav__list-anchor--heading,
     .nav__list-anchor {
