@@ -5,6 +5,10 @@
   margin: 0;
   overflow-y: none;
   min-height: 100vh;
+
+  @include max-width-viewport(md) {
+    flex-wrap: wrap;
+  }
 }
 
 .content-wrapper {
@@ -20,5 +24,19 @@
   @include dark-mode {
     background-color: get-color(black, 1);
     color: get-color(white);
+  }
+
+  @include max-width-viewport(lg) {
+    padding: set-size(2) set-size(20);
+  }
+
+  @include max-width-viewport(md) {
+    width: 100%;
+  }
+}
+
+.skip-link {
+  @include min-width-viewport(md) {
+    @include focusable-only;
   }
 }
