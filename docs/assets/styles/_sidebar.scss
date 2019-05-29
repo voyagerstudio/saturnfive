@@ -15,7 +15,7 @@
 
   @include max-width-viewport(md) {
     width: 100%;
-    padding: set-size(10) set-size(40);
+    padding: set-size(10) set-size(20);
   }
 }
 
@@ -76,19 +76,18 @@
   @include border-radius(4);
 
   & .nav__anchor-arrow {
-    position: absolute;
     right: set-px(-16);
     display: inline-block;
-    // opacity: 0;
+    opacity: 0;
     transform: translateX(0);
     transition: transform 200ms ease-in-out, opacity 75ms ease-in;
-    outline: 1px solid red;
   }
 
   &:focus,
   &:hover {
     transform: translatex(set-size(3));
     color: get-color(primary);
+    padding-right: set-size(8);
 
     & .nav__anchor-arrow {
       opacity: 1;
@@ -97,8 +96,8 @@
   }
 
   &:focus {
-    outline: none !important    ;
-    background-color: get-color(primary, 0, 25)
+    outline: none;
+    background-color: get-color(primary, 0, 25);
   }
 
   @include dark-mode {

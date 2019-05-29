@@ -84,7 +84,9 @@ body {
     padding: 0 !important;
     position: absolute !important;
     width: 1px !important;
-    white-space: nowrap !important; } }
+    white-space: nowrap !important;
+    word-wrap: none;
+    display: inline-block; } }
 
 @keyframes heading-kaleidoscope {
   0% {
@@ -203,7 +205,7 @@ body {
   @media screen and (max-width: 1024px) {
     .sidebar {
       width: 100%;
-      padding: 2.5rem 10rem; } }
+      padding: 2.5rem 5rem; } }
 
 .footer-to-top {
   font-size: 1.0011291504rem;
@@ -283,17 +285,17 @@ body {
   border-bottom-left-radius: 0.25rem; }
   .nav__list-anchor--heading .nav__anchor-arrow,
   .nav__list-anchor .nav__anchor-arrow {
-    position: absolute;
     right: -1rem;
     display: inline-block;
+    opacity: 0;
     transform: translateX(0);
-    transition: transform 200ms ease-in-out, opacity 75ms ease-in;
-    outline: 1px solid red; }
+    transition: transform 200ms ease-in-out, opacity 75ms ease-in; }
   .nav__list-anchor--heading:focus, .nav__list-anchor--heading:hover,
   .nav__list-anchor:focus,
   .nav__list-anchor:hover {
     transform: translatex(0.75rem);
-    color: #9c75f3; }
+    color: #9c75f3;
+    padding-right: 2rem; }
     .nav__list-anchor--heading:focus .nav__anchor-arrow, .nav__list-anchor--heading:hover .nav__anchor-arrow,
     .nav__list-anchor:focus .nav__anchor-arrow,
     .nav__list-anchor:hover .nav__anchor-arrow {
@@ -301,7 +303,7 @@ body {
       transform: translateX(1.25rem); }
   .nav__list-anchor--heading:focus,
   .nav__list-anchor:focus {
-    outline: none !important;
+    outline: none;
     background-color: rgba(156, 117, 243, 0.25); }
   @media (prefers-color-scheme: dark) {
     .nav__list-anchor--heading,
@@ -341,7 +343,9 @@ body {
   padding: 0 !important;
   position: absolute !important;
   width: 1px !important;
-  white-space: nowrap !important; }
+  white-space: nowrap !important;
+  word-wrap: none;
+  display: inline-block; }
 
 .type-intro__heading {
   font-size: 4.6288477772rem;
@@ -413,7 +417,9 @@ table caption:not(#specificity-override) {
   padding: 0 !important;
   position: absolute !important;
   width: 1px !important;
-  white-space: nowrap !important; }
+  white-space: nowrap !important;
+  word-wrap: none;
+  display: inline-block; }
 
 tr th {
   font-size: 1.0011291504rem;
