@@ -34,7 +34,6 @@ body {
   display: flex;
   padding: 0;
   margin: 0;
-  overflow-y: none;
   min-height: 100vh; }
   @media screen and (max-width: 1024px) {
     .wrapper {
@@ -43,8 +42,7 @@ body {
 .content-wrapper {
   background-color: white;
   padding: 0.5rem 12.5rem;
-  width: calc(100% - 25rem);
-  overflow-y: scroll; }
+  width: calc(100% - 25rem); }
   @media screen and (min-width: 2200px) {
     .content-wrapper {
       width: 70%; } }
