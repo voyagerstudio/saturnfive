@@ -1,5 +1,5 @@
 @mixin focusable-only {
-  & {
+  &:not(#specificity-override) {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -8,15 +8,15 @@
     border: 0;
     clip: rect(0 0 0 0);
     overflow: hidden;
-  }
 
-  &:active,
-  &:focus {
-    @include zindex(focusable-only);
-    width: auto;
-    height: auto;
-    margin: 0;
-    clip: auto;
-    overflow: visible;
+    &:active,
+    &:focus {
+      @include zindex(focusable-only);
+      width: auto;
+      height: auto;
+      margin: 0;
+      clip: auto;
+      overflow: visible;
+    }
   }
 }

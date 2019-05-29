@@ -1,5 +1,5 @@
 @mixin screen-reader-only {
-  &:not(#sr-only-specificity-fix) {
+  &:not(#specificity-override) {
     border: 0;
     clip: rect(0, 0, 0, 0);
     height: .1rem;
