@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="assets/style.processed.css">
+  <title>Saturn V - Configurations</title>
+  
+  <!-- Matomo -->
+<script type="text/javascript">
+  var _paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//track.voyager.studio/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '6']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->
+</head>
+<body>
+  <div class="wrapper">
+    <main class="content-wrapper">
+      <heading id="page-top" class="header">
+        <nav class="header-nav">
+          <h1 class="header-heading"><a class="header-anchor" href="/">Saturn V</a></h1>
+          <ul class="header-nav__list">
+            <li class="header-nav__list-item">
+              <a href="http://github.com/voyagerstudio/saturnfive" target="_blank" class="header-nav__anchor">github</a>
+            </li>
+            <li class="header-nav__list-item">
+              <a href="https://twitter.com/voyagerlog" target="_blank" class="header-nav__anchor">twitter</a>
+            </li>
+            <li class="header-nav__list-item skip-link">
+              <a href="#sat-five-nav" class="header-nav__anchor">Skip to Navigation</a>
+            </li>
+          </ul>
+        </nav>
+      </heading>
+      <section class="type-intro">
+        <h2 class="type-intro__heading">Configurations</h2>
+        <p class="type-intro__description">This is the complete list of variables that power Saturn V along with their default values and descriptions.
+        </p>
+      </section>
+      <section class="content-section config">
+        <h3 class="section-heading" id="config--base-units">base units</h3>
+        <p class="section-description">foundational variables that dictate base units in Saturn V</p>
+        <table>
+          <caption>foundational variables that dictate base units in Saturn V</caption>
+          <thead>
+            <tr>
+              <th scope="col">Variable</th>
+              <th scope="col">Default Value</th>
+              <th scope="col">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>$s5_foundation-unit-size</code></td>
+              <td><code>4px</code></td>
+              <td>The default value used as a multiplier in the <code>size-multiplier()</code> function.</td>
+            </tr>
+            <tr>
+              <td><code>$s5_color-scale-step-total</code></td>
+              <td>19</td>
+              <td>This controls how many additional lighter and darker colors get generated. This must be an odd number. 19 color steps means there is 1 base and 9 darker/lighter options.</td>
+            </tr>
+            <tr>
+              <td><code>$s5_type-scale-modifier</code></td>
+              <td>1.125</td>
+              <td>This controls how much each type size increases</td>
+            </tr>
+            <tr>
+              <td><code>$s5_type-scale-base</code></td>
+              <td>10px</td>
+              <td>This controls what the starting (and smallest) type scale size is.</td>
+            </tr>
+            <tr>
+              <td><code>$s5_type-root-size</code></td>
+              <td>16px</td>
+              <td>This keeps the math accurate for determining rem sizes. If you change the font-size for the <code>html</code> property, you should change this variable also.</td>
+            </tr>
+            <tr>
+              <td><code>$s5_zindex-order</code></td>
+              <td>"example-one", "example-two", "example-three"</td>
+              <td>This auto-sets z-index values depending on the order in this list. This is used by the <code>zindex()</code> mixin.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section class="content-section config">
+        <h3 class="section-heading" id="config--color">Color</h3>
+        <p class="section-description">foundational variables that dictate base units in Saturn V</p>
+        <table>
+          <caption>foundational variables that dictate base units in Saturn V</caption>
+          <thead>
+            <tr>
+              <th scope="col">Variable</th>
+              <th scope="col">Default Value</th>
+              <th scope="col">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>$s5_color-brand-color-1</code></td>
+              <td><code>#9C75F3</code></td>
+              <td>The default brand color. you can access via <code>get-color(primary)</code>.</td>
+            </tr>
+            <tr>
+              <td><code>$s5_color-brand-color-2</code></td>
+              <td><code>mediumblue</code></td>
+              <td>The secondary brand color. you can access via <code>get-color(secondary)</code>.</td>
+            </tr>
+            <tr>
+              <td><code>$s5_color-brand-color-3</code></td>
+              <td><code>#a10000</code></td>
+              <td>The tertiary brand color. you can access via <code>get-color(tertiary)</code>.</td>
+            </tr>
+            <tr>
+              <td><code>$s5_color-soft-white</code></td>
+              <td><code>#FAFCFC</code></td>
+              <td>a soft grey that's light enough to use as an alternative to white. you can access via
+                <code>get-color(soft-white)</code>.</td>
+            </tr>
+            <tr>
+              <td><code>$s5_color-soft-black</code></td>
+              <td><code>#0D0C0C</code></td>
+              <td>a dark grey that's dark enough to use as an alternative to black. you can access via
+                <code>get-color(soft-black)</code>.</td>
+            </tr>
+            <tr>
+              <td><code>$s5_color-focus-base</code></td>
+              <td><code>#002eff</code></td>
+              <td>a color that is used for UI elements that are being focused. you can access via
+                <code>get-color(focus)</code>.</td>
+            </tr>
+            <tr>
+              <td><code>$s5_color-info-base</code></td>
+              <td><code>#002eff</code></td>
+              <td>a color that is used for UI elements that represent info. you can access via
+                <code>get-color(info)</code>.</td>
+            </tr>
+            <tr>
+              <td><code>$s5_color-alert-base</code></td>
+              <td><code>gold</code></td>
+              <td>a color that is used for UI elements that represent alerts. you can access via
+                <code>get-color(alert)</code>.</td>
+            </tr>
+            <tr>
+              <td><code>$s5_color-warning-base</code></td>
+              <td><code>#f14400</code></td>
+              <td>a color that is used for UI elements that represent warnings. you can access via
+                <code>get-color(warning)</code>.</td>
+            </tr>
+            <tr>
+              <td><code>$s5_color-danger-base</code></td>
+              <td><code>#dc1414</code></td>
+              <td>a color that is used for UI elements that represent danger. you can access via
+                <code>get-color(danger)</code>.</td>
+            </tr>
+            <tr>
+              <td><code>$s5_color-success-base</code></td>
+              <td><code>#1aaa35</code></td>
+              <td>a color that is used for UI elements that represent success. you can access via
+                <code>get-color(success)</code>.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section class="content-section config">
+        <h3 class="section-heading" id="config--media-queries">media-queries</h3>
+        <p class="section-description">viewport breakpoints for adaptive layouts</p>
+        <table>
+          <caption>viewport breakpoints for adaptive layouts</caption>
+          <thead>
+            <tr>
+              <th scope="col">Variable</th>
+              <th scope="col">Default Value</th>
+              <th scope="col">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>$s5_viewport-micro</code></td>
+              <td><code>320px</code></td>
+              <td>the smallest viewport size</td>
+            </tr>
+            <tr>
+              <td><code>$s5_viewport-xs</code></td>
+              <td><code>640px</code></td>
+              <td>the "extra-small" viewport size</td>
+            </tr>
+            <tr>
+              <td><code>$s5_viewport-sm</code></td>
+              <td><code>768px</code></td>
+              <td>the "small" viewport size</td>
+            </tr>
+            <tr>
+              <td><code>$s5_viewport-md</code></td>
+              <td><code>1024px</code></td>
+              <td>the "medium" viewport size</td>
+            </tr>
+            <tr>
+              <td><code>$s5_viewport-lg</code></td>
+              <td><code>1440px</code></td>
+              <td>the "large" viewport size</td>
+            </tr>
+            <tr>
+              <td><code>$s5_viewport-xl</code></td>
+              <td><code>1600px</code></td>
+              <td>the "extra-large" viewport size</td>
+            </tr>
+            <tr>
+              <td><code>$s5_viewport-massive</code></td>
+              <td><code>2200px</code></td>
+              <td>the "massive" viewport size</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section class="content-section config">
+        <h3 class="section-heading" id="config--type-stacks">Type-Stacks</h3>
+        <p class="section-description">the various sets of Type families and fallbacks for different contexts.</p>
+        <table>
+          <caption>the various sets of Type families and fallbacks for different contexts.</caption>
+          <thead>
+            <tr>
+              <th scope="col">Variable</th>
+              <th scope="col">Default Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>$s5_typestack--monospace</code></td>
+              <td><code>"Andale Mono", AndaleMono, monospace</code></td>
+            </tr>
+            <tr>
+              <td><code>$s5_typestack--sans-serif</code></td>
+              <td><code>sans-serif</code></td>
+            </tr>
+            <tr>
+              <td><code>$s5_typestack--serif</code></td>
+              <td><code>serif</code></td>
+            </tr>
+            <tr>
+              <td><code>$s5_typestack--display</code></td>
+              <td><code>BlinkMacSystemFont,-apple-system,"Roboto","Droid Sans","Segoe UI","Helvetica
+                  Neue",Helvetica,Arial,sans-serif</code></td>
+            </tr>
+            <tr>
+              <td><code>$s5_typestack--masthead</code></td>
+              <td><code>$s5_typestack--display</code></td>
+            </tr>
+            <tr>
+              <td><code>$s5_typestack--body</code></td>
+              <td><code>$s5_typestack--display</code></td>
+            </tr>
+            <tr>
+              <td><code>$s5_typestack--text</code></td>
+              <td><code>$s5_typestack--body</code></td>
+            </tr>
+            <tr>
+              <td><code>$s5_typestack--code</code></td>
+              <td><code>$s5_typestack--monospace</code></td>
+            </tr>
+            <tr>
+              <td><code>$s5_typestack--interface</code></td>
+              <td><code>$s5_typestack--display</code></td>
+            </tr>
+            <tr>
+              <td><code>$s5_typestack--caption</code></td>
+              <td><code>$s5_typestack--display</code></td>
+            </tr>
+            <tr>
+              <td><code>$s5_typestack--aside</code></td>
+              <td><code>$s5_typestack--display</code></td>
+            </tr>
+            <tr>
+              <td><code>$s5_typestack--blockquote</code></td>
+              <td><code>$s5_typestack--display</code></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section class="content-section config">
+        <h3 class="section-heading" id="config--type-weight">Type-Weights</h3>
+        <p class="section-description">various type-weights.</p>
+        <table>
+          <caption>various type-weights.</caption>
+          <thead>
+            <tr>
+              <th scope="col">Variable</th>
+              <th scope="col">Default Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>$s5_weight--thin</code></td>
+              <td><code>100</code></td>
+            </tr>
+            <tr>
+              <td><code>$s5_weight--extra-light</code></td>
+              <td><code>200</code></td>
+            </tr>
+            <tr>
+              <td><code>$s5_weight--light</code></td>
+              <td><code>300</code></td>
+            </tr>
+            <tr>
+              <td><code>$s5_weight--book</code></td>
+              <td><code>400</code></td>
+            </tr>
+            <tr>
+              <td><code>$s5_weight--medium</code></td>
+              <td><code>500</code></td>
+            </tr>
+            <tr>
+              <td><code>$s5_weight--demi-bold</code></td>
+              <td><code>600</code></td>
+            </tr>
+            <tr>
+              <td><code>$s5_weight--bold</code></td>
+              <td><code>700</code></td>
+            </tr>
+            <tr>
+              <td><code>$s5_weight--heavy</code></td>
+              <td><code>800</code></td>
+            </tr>
+            <tr>
+              <td><code>$s5_weight--black</code></td>
+              <td><code>900</code></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section class="content-section config">
+      <h3 class="section-heading" id="config--line-height">Line Heights</h3>
+      <p class="section-description">various line-heights.</p>
+      <table>
+        <caption>various line-heights.</caption>
+        <thead>
+          <tr>
+            <th scope="col">Variable</th>
+            <th scope="col">Default Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>$s5_line-height-xxs</code></td>
+            <td><code>1</code></td>
+          </tr>
+          <tr>
+            <td><code>$s5_line-height-xs</code></td>
+            <td><code>1.2</code></td>
+          </tr>
+          <tr>
+            <td><code>$s5_line-height-sm</code></td>
+            <td><code>1.4</code></td>
+          </tr>
+          <tr>
+            <td><code>$s5_line-height-md</code></td>
+            <td><code>1.6</code></td>
+          </tr>
+          <tr>
+            <td><code>$s5_line-height-lg</code></td>
+            <td><code>2</code></td>
+          </tr>
+          <tr>
+            <td><code>$s5_line-height-xl</code></td>
+            <td><code>3</code></td>
+          </tr>
+        </tbody>
+      </table>
+      </section>
+      <footer class="main-foot">
+        <hr>
+        <div class="main-foot__logos">
+          <img src="assets/voyager_meatball.svg" alt="the worm variant of the voyager logo">
+          <img src="assets/voyager_worm.svg" alt="the worm variant of the voyager logo">
+        </div>
+        <p>2019 — MIT License. Built by <a href="https://voyager.studio">Voyager Studio</a></p>
+      </footer>
+    </main>
+   <aside class="sidebar">
+     <nav id="sat-five-nav" class="nav_wrapper">
+       <a href="#page-top" class="footer-to-top skip-link">Back to Top</a>
+       <ul class="nav__list">
+         <li class="nav__list-item">
+           <div class="nav__list-heading"><a href="/" class="nav__list-anchor--heading">Introduction<span
+                 class="nav__anchor-arrow">&#x2192;</span></a></div>
+           <ul class="nav__list">
+             <li class="nav__list-item">
+               <a href="/index.html#intro--getting-started" class="nav__list-anchor">Getting Started<span
+                   class="nav__anchor-arrow">&#x2192;</span></a>
+             </li>
+             <li class="nav__list-item">
+               <a href="/index.html#intro--contributing" class="nav__list-anchor">Contribution Guide<span
+                   class="nav__anchor-arrow">&#x2192;</span></a>
+             </li>
+           </ul>
+         </li>
+         <li class="nav__list-item">
+           <div class="nav__list-heading"><a href="/configurations.html"
+               class="nav__list-anchor--heading">Configurations<span class="nav__anchor-arrow">&#x2192;</span></a>
+           </div>
+           <ul class="nav__list">
+             <li class="nav__list-item">
+               <a href="/configurations.html#config--base-units" class="nav__list-anchor">Base Units <span
+                   class="sr-only">configuration</span><span class="nav__anchor-arrow">&#x2192;</span></a>
+             </li>
+             <li class="nav__list-item">
+               <a href="/configurations.html#config--color" class="nav__list-anchor">Color <span
+                   class="sr-only">configuration</span><span class="nav__anchor-arrow">&#x2192;</span></a>
+             </li>
+             <li class="nav__list-item">
+               <a href="/configurations.html#config--media-queries" class="nav__list-anchor">Media Queries <span
+                   class="sr-only">configuration</span><span class="nav__anchor-arrow">&#x2192;</span></a>
+             </li>
+             <li class="nav__list-item">
+               <a href="/configurations.html#config--type-stacks" class="nav__list-anchor">Type Stacks <span
+                   class="sr-only">configuration</span><span class="nav__anchor-arrow">&#x2192;</span></a>
+             </li>
+             <li class="nav__list-item">
+               <a href="/configurations.html#config--type-weight" class="nav__list-anchor">Type Weights <span
+                   class="sr-only">configuration</span><span class="nav__anchor-arrow">&#x2192;</span></a>
+             </li>
+             <li class="nav__list-item">
+               <a href="/configurations.html#config--line-height" class="nav__list-anchor">Line Height <span
+                   class="sr-only">configuration</span><span class="nav__anchor-arrow">&#x2192;</span></a>
+             </li>
+           </ul>
+         </li>
+         <li class="nav__list-item">
+           <div class="nav__list-heading"><a href="/utilities.html" class="nav__list-anchor--heading">Utilities<span
+                 class="nav__anchor-arrow">&#x2192;</span></a></div>
+           <ul class="nav__list">
+             <li class="nav__list-item">
+               <a href="/utilities.html#utility--border-radius" class="nav__list-anchor">Border Radius <span
+                   class="sr-only">utility</span><span class="nav__anchor-arrow">&#x2192;</span></a>
+             </li>
+             <li class="nav__list-item">
+               <a href="/utilities.html#utility--color" class="nav__list-anchor">Color <span
+                   class="sr-only">utility</span><span class="nav__anchor-arrow">&#x2192;</span></a>
+             </li>
+             <li class="nav__list-item">
+               <a href="/utilities.html#utility--dark-mode" class="nav__list-anchor">Dark Mode <span
+                   class="sr-only">utility</span><span class="nav__anchor-arrow">&#x2192;</span></a>
+             </li>
+             <li class="nav__list-item">
+               <a href="/utilities.html#utility--disable-text-select" class="nav__list-anchor">Disable Text Select <span
+                   class="sr-only">utility</span><span class="nav__anchor-arrow">&#x2192;</span></a>
+             </li>
+             <li class="nav__list-item">
+               <a href="/utilities.html#utility--focusable-only" class="nav__list-anchor">Focusable Only <span
+                   class="sr-only">utility</span><span class="nav__anchor-arrow">&#x2192;</span></a>
+             </li>
+             <li class="nav__list-item">
+               <a href="/utilities.html#utility--media-queries" class="nav__list-anchor">Media Queries <span
+                   class="sr-only">utility</span><span class="nav__anchor-arrow">&#x2192;</span></a>
+             </li>
+             <li class="nav__list-item">
+               <a href="/utilities.html#utility--rem-calculator" class="nav__list-anchor">Rem Calculator <span
+                   class="sr-only">utility</span><span class="nav__anchor-arrow">&#x2192;</span></a>
+             </li>
+             <li class="nav__list-item">
+               <a href="/utilities.html#utility--sr-only" class="nav__list-anchor">Screen Reader Only <span
+                   class="sr-only">utility</span><span class="nav__anchor-arrow">&#x2192;</span></a>
+             </li>
+             <li class="nav__list-item">
+               <a href="/utilities.html#utility--share-px-val" class="nav__list-anchor">Share px Value <span
+                   class="sr-only">utility</span><span class="nav__anchor-arrow">&#x2192;</span></a>
+             </li>
+             <li class="nav__list-item">
+               <a href="/utilities.html#utility--simple-gradient" class="nav__list-anchor">Simple Gradient <span
+                   class="sr-only">utility</span><span class="nav__anchor-arrow">&#x2192;</span></a>
+             </li>
+             <li class="nav__list-item">
+               <a href="/utilities.html#utility--size-multiplier" class="nav__list-anchor">Size Multiplier <span
+                   class="sr-only">utility</span><span class="nav__anchor-arrow">&#x2192;</span></a>
+             </li>
+             <li class="nav__list-item">
+               <a href="/utilities.html#utility--set-type" class="nav__list-anchor">Set Type <span
+                   class="sr-only">utility</span><span class="nav__anchor-arrow">&#x2192;</span></a>
+             </li>
+             <li class="nav__list-item">
+               <a href="/utilities.html#utility--set-line-height" class="nav__list-anchor">Set Type Line Height <span
+                   class="sr-only">utility</span><span class="nav__anchor-arrow">&#x2192;</span></a>
+             </li>
+             <li class="nav__list-item">
+               <a href="/utilities.html#utility--set-type-stack" class="nav__list-anchor">Set Type Stack <span
+                   class="sr-only">utility</span><span class="nav__anchor-arrow">&#x2192;</span></a>
+             </li>
+             <li class="nav__list-item">
+               <a href="/utilities.html#utility--set-type-styles" class="nav__list-anchor">Set Type Style <span
+                   class="sr-only">utility</span><span class="nav__anchor-arrow">&#x2192;</span></a>
+             </li>
+             <li class="nav__list-item">
+               <a href="/utilities.html#utility--set-type-weight" class="nav__list-anchor">Set Type Weight <span
+                   class="sr-only">utility</span><span class="nav__anchor-arrow">&#x2192;</span></a>
+             </li>
+             <!-- <li class="nav__list-item">
+                <a href="/utilities.html#utility--shadows" class="nav__list-anchor">Shadows <span
+                    class="sr-only">utility</span><span class="nav__anchor-arrow">&#x2192;</span></a>
+              </li> -->
+             <li class="nav__list-item">
+               <a href="/utilities.html#utility--zindex" class="nav__list-anchor">z index <span
+                   class="sr-only">utility</span><span class="nav__anchor-arrow">&#x2192;</span></a>
+             </li>
+           </ul>
+         </li>
+       </ul>
+     </nav>
+   </aside>
+  </div>
+</body>
+</html>
