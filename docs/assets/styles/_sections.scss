@@ -27,3 +27,41 @@
   margin-bottom: set-size(50);
   display: block;
 }
+
+.section-type {
+  @include set-type(display, 6, medium);
+  margin-top: set-px(-50);
+  margin-bottom: set-size(12);
+  letter-spacing: 0.05ex;
+
+  &--mixin {
+    color: get-color(crimson);
+  }
+
+  &--function {
+    color: get-color(green);
+  }
+}
+
+.section-preview {
+  display: block;
+  padding: 0;
+}
+
+.section-preview__pre {
+  @include border-radius(5px);
+  background-color: get-color(black, 8);
+  padding: 0 set-size(8);
+  display: block;
+  margin-bottom: set-size(10);
+
+  @include dark-mode {
+    background-color: get-color(white, -7);
+    color: get-color(white);
+  }
+}
+
+.section-preview__code {
+  @include set-type(code, 5);
+  display: block;
+}
