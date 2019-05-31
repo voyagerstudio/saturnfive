@@ -145,7 +145,7 @@
     outline: 1px solid red;
   }
 
-  @includ light-mode {
+  @include light-mode {
     outline: 1px solid blue;
   }
 }
@@ -166,6 +166,524 @@
               <td>no arguments</td>
               <td></td>
               <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section class="content-section utility">
+        <h3 class="section-heading" id="utility--disable-text-select">disable-text-select</h3>
+        <div class="section-type section-type--mixin">mixin</div>
+        <p class="section-description">A mixin for disabling the ability for text to be selectable.</p>
+        <p class="section-preview">
+          <pre class="section-preview__pre">
+            <code class="section-preview__code">
+.example {
+  @include disable-text-select;
+}
+            </code>
+          </pre>
+        </p>
+        <table>
+          <caption>Arguments available in the border-radius mixin</caption>
+          <thead>
+            <tr>
+              <th scope="col">argument</th>
+              <th scope="col">Default Value</th>
+              <th scope="col">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>no arguments</td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section class="content-section utility">
+        <h3 class="section-heading" id="utility--focusable-only">focusable-only</h3>
+        <div class="section-type section-type--mixin">mixin</div>
+        <p class="section-description">A mixin for making an otherwise interactive element only visible when focused.</p>
+        <p class="section-preview">
+          <pre class="section-preview__pre">
+            <code class="section-preview__code">
+.example {
+  @include focusable-only;
+}
+            </code>
+          </pre>
+        </p>
+        <table>
+          <caption>Arguments available in the border-radius mixin</caption>
+          <thead>
+            <tr>
+              <th scope="col">argument</th>
+              <th scope="col">Default Value</th>
+              <th scope="col">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>no arguments</td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section class="content-section utility">
+        <h3 class="section-heading" id="utility--media-queries">media-queries</h3>
+        <div class="section-type section-type--mixin">mixin</div>
+        <p class="section-description">A pair of mixins for setting styles based on min or max viewport widths.
+        </p>
+        <p class="section-preview">
+          <pre class="section-preview__pre">
+            <code class="section-preview__code">
+.example {
+  @include min-width-viewport(sm) {
+    // some styles
+  }
+
+  @include max-width-viewport(massive) {
+  // some styles
+  }
+}
+            </code>
+          </pre>
+        </p>
+        <table>
+          <caption>Arguments available in the border-radius mixin</caption>
+          <thead>
+            <tr>
+              <th scope="col">argument</th>
+              <th scope="col">Default Value</th>
+              <th scope="col">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>micro</code></td>
+              <td><code>320px</code></td>
+              <td>the smallest viewport size</td>
+            </tr>
+            <tr>
+              <td><code>xs</code></td>
+              <td><code>640px</code></td>
+              <td>the extra-small viewport size</td>
+            </tr>
+            <tr>
+              <td><code>sm</code></td>
+              <td><code>768px</code></td>
+              <td>the small viewport size</td>
+            </tr>
+            <tr>
+              <td><code>md</code></td>
+              <td><code>1024px</code></td>
+              <td>the medium viewport size</td>
+            </tr>
+            <tr>
+              <td><code>lg</code></td>
+              <td><code>1440px</code></td>
+              <td>the large viewport size</td>
+            </tr>
+            <tr>
+              <td><code>xl</code></td>
+              <td><code>1600px</code></td>
+              <td>the extra-large viewport size</td>
+            </tr>
+            <tr>
+              <td><code>massive</code></td>
+              <td><code>2200px</code></td>
+              <td>the massive viewport size</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section class="content-section utility">
+        <h3 class="section-heading" id="utility--rem-calculator">rem calculator</h3>
+        <div class="section-type section-type--function">function</div>
+        <p class="section-description">A function for converting values from pixel to rem units.
+        </p>
+        <p class="section-preview">
+          <pre class="section-preview__pre">
+            <code class="section-preview__code">
+.example {
+  padding: set-px(10) set-px(20);
+  margin: set-px(400);
+  margin-left: set-px(-200);
+}
+            </code>
+          </pre>
+        </p>
+        <table>
+          <caption>Arguments available in the border-radius mixin</caption>
+          <thead>
+            <tr>
+              <th scope="col">argument</th>
+              <th scope="col">Default Value</th>
+              <th scope="col">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>$size</code></td>
+              <td>none</td>
+              <td>the size in pixels that you're intending to convert to rem.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section class="content-section utility">
+        <h3 class="section-heading" id="utility--sr-only">screen-reader-only</h3>
+        <div class="section-type section-type--mixin">mixin</div>
+        <p class="section-description">A mixin for making content only accessible to screen readers.
+        </p>
+        <p class="section-preview">
+          <pre class="section-preview__pre">
+            <code class="section-preview__code">
+.example {
+  @include screen-reader-only;
+  // whatever styles you want, the mixin will still override them.
+}
+            </code>
+          </pre>
+        </p>
+        <table>
+          <caption>Arguments available in the border-radius mixin</caption>
+          <thead>
+            <tr>
+              <th scope="col">argument</th>
+              <th scope="col">Default Value</th>
+              <th scope="col">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>no arguments</td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section class="content-section utility">
+        <h3 class="section-heading" id="utility--share-px-val">share-px-value</h3>
+        <div class="section-type section-type--mixin">mixin</div>
+        <p class="section-description">A mixin for sharing the same pixel value across multiple properties.
+        </p>
+        <p class="section-preview">
+          <pre class="section-preview__pre">
+            <code class="section-preview__code">
+.example {
+  @include share-px-value(margin-left, padding-left, 5px);
+}
+            </code>
+          </pre>
+        </p>
+        <table>
+          <caption>Arguments available in the border-radius mixin</caption>
+          <thead>
+            <tr>
+              <th scope="col">argument</th>
+              <th scope="col">Default Value</th>
+              <th scope="col">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>$props...</code></td>
+              <td>none</td>
+              <td>list the properties that should share the same value separated by a comma. the last argument should be the pixel value that will be shared (converted to rem)</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section class="content-section utility">
+        <h3 class="section-heading" id="utility--simple-gradient">simple-gradient</h3>
+        <div class="section-type section-type--mixin">mixin</div>
+        <p class="section-description">A mixin for creating a simple linear-gradient based off a single input color.
+        </p>
+        <p class="section-preview">
+          <pre class="section-preview__pre">
+            <code class="section-preview__code">
+.example {
+  @include simple-gradient(red, dark);
+}
+            </code>
+          </pre>
+        </p>
+        <table>
+          <caption>Arguments available in the border-radius mixin</caption>
+          <thead>
+            <tr>
+              <th scope="col">argument</th>
+              <th scope="col">Default Value</th>
+              <th scope="col">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>$gradient-color</code></td>
+              <td>none</td>
+              <td>the base color the gradient will use to determine the start and end point</td>
+            </tr>
+            <tr>
+              <td><code>$lightness</code></td>
+              <td><code>base</code></td>
+              <td>modify the brightness of the gradient. Options include: darkest, darker, dark, base, light, lighter, and lightest</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section class="content-section utility">
+        <h3 class="section-heading" id="utility--size-multiplier">size-multiplier</h3>
+        <div class="section-type section-type--function">function</div>
+        <p class="section-description">A function for setting sizes in multiples of some base value (set by the related config variable).
+        </p>
+        <p class="section-preview">
+          <pre class="section-preview__pre">
+            <code class="section-preview__code">
+.example {
+  padding: set-size(2) set-size(4);
+  margin: set-size(pixel);
+}
+            </code>
+          </pre>
+        </p>
+        <table>
+          <caption>Arguments available in the border-radius mixin</caption>
+          <thead>
+            <tr>
+              <th scope="col">argument</th>
+              <th scope="col">Default Value</th>
+              <th scope="col">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>$multiplier</code></td>
+              <td><code>1</code></td>
+              <td>multiplies the base value set by <code>$s5_foundation-unit-size</code>. You can also set 'micro' or 'pixel' as arguments for the rem equivalent of 2 or 1px respectively.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section class="content-section utility">
+        <h3 class="section-heading" id="utility--set-type">set-type</h3>
+        <div class="section-type section-type--mixin">mixin</div>
+        <p class="section-description">A mixin shorthand for setting a handful of type properties. 
+        </p>
+        <p class="section-preview">
+          <pre class="section-preview__pre">
+            <code class="section-preview__code">
+.example {
+  @include set-type(display, 8, bold, md, italic);
+}
+            </code>
+          </pre>
+        </p>
+        <table>
+          <caption>Arguments available in the border-radius mixin</caption>
+          <thead>
+            <tr>
+              <th scope="col">argument</th>
+              <th scope="col">Default Value</th>
+              <th scope="col">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>$type-stack</code></td>
+              <td><code>body</code></td>
+              <td>this determines the type stack that gets used. options include: monospace, sans-serif, serif, display, masthead, body, text, code, interface, caption, aside, and blockquote.</td>
+            </tr>
+            <tr>
+              <td><code>$font-scale</code></td>
+              <td><code>5</code></td>
+              <td>this sets the type size based on a type scale using the ratio set by <code>$s5_type-scale-modifier</code>. Any whole number greater than 1 is a valid option. 
+              </td>
+            </tr>
+            <tr>
+              <td><code>$weight</code></td>
+              <td><code>book</code></td>
+              <td>this sets the type weight. options include: thin, light, book, medium, demi-bold, bold, heavy, and black.
+              </td>
+            </tr>
+            <tr>
+              <td><code>$line-height</code></td>
+              <td><code>md</code></td>
+              <td>this sets the line height. options include: xxs (1), xs, sm, md, lg, and xl.
+              </td>
+            </tr>
+            <tr>
+              <td><code>$style</code></td>
+              <td><code>normal</code></td>
+              <td>this sets the type style. options include: normal, italic, and oblique
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section class="content-section utility">
+        <h3 class="section-heading" id="utility--set-line-height">set line-height</h3>
+        <div class="section-type section-type--mixin">mixin</div>
+        <p class="section-description">A mixin for setting the line height. useful for overriding a parents usage of <code>set-type()</code>. 
+        </p>
+        <p class="section-preview">
+          <pre class="section-preview__pre">
+            <code class="section-preview__code">
+.example {
+  @include set-type-line-height(xl);
+}
+            </code>
+          </pre>
+        </p>
+        <table>
+          <caption>Arguments available in the border-radius mixin</caption>
+          <thead>
+            <tr>
+              <th scope="col">argument</th>
+              <th scope="col">Default Value</th>
+              <th scope="col">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>$line-height</code></td>
+              <td><code>md</code></td>
+              <td>this sets the line height. options include: xxs (1), xs, sm, md, lg, and xl.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section class="content-section utility">
+        <h3 class="section-heading" id="utility--set-type-stack">set type-stack</h3>
+        <div class="section-type section-type--mixin">mixin</div>
+        <p class="section-description">A mixin for setting the type stack. useful for overriding a parents usage of
+          <code>set-type()</code>.
+        </p>
+        <p class="section-preview">
+          <pre class="section-preview__pre">
+            <code class="section-preview__code">
+.example {
+  @include set-type-stack(interface);
+}
+            </code>
+          </pre>
+        </p>
+        <table>
+          <caption>Arguments available in the border-radius mixin</caption>
+          <thead>
+            <tr>
+              <th scope="col">argument</th>
+              <th scope="col">Default Value</th>
+              <th scope="col">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>$context</code></td>
+              <td><code>body</code></td>
+              <td>this determines the type stack that gets used. options include: monospace, sans-serif, serif, display, masthead, body, text, code, interface, caption, aside, and blockquote.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section class="content-section utility">
+        <h3 class="section-heading" id="utility--set-type-style">set type-style</h3>
+        <div class="section-type section-type--mixin">mixin</div>
+        <p class="section-description">A mixin for setting the type style. useful for overriding a parents usage of
+          <code>set-type()</code>.
+        </p>
+        <p class="section-preview">
+          <pre class="section-preview__pre">
+            <code class="section-preview__code">
+.example {
+  @include set-type-style(italic);
+}
+            </code>
+          </pre>
+        </p>
+        <table>
+          <caption>Arguments available in the border-radius mixin</caption>
+          <thead>
+            <tr>
+              <th scope="col">argument</th>
+              <th scope="col">Default Value</th>
+              <th scope="col">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>$style</code></td>
+              <td><code>normal</code></td>
+              <td>this sets the type style. options include: normal, italic, and oblique</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section class="content-section utility">
+        <h3 class="section-heading" id="utility--set-type-weight">set type-weight</h3>
+        <div class="section-type section-type--mixin">mixin</div>
+        <p class="section-description">A mixin for setting the type weight. useful for overriding a parents usage of
+          <code>set-type()</code>.
+        </p>
+        <p class="section-preview">
+          <pre class="section-preview__pre">
+            <code class="section-preview__code">
+.example {
+  @include set-type-weight(demi-bold);
+}
+            </code>
+          </pre>
+        </p>
+        <table>
+          <caption>Arguments available in the border-radius mixin</caption>
+          <thead>
+            <tr>
+              <th scope="col">argument</th>
+              <th scope="col">Default Value</th>
+              <th scope="col">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>$weight</code></td>
+              <td><code>book</code></td>
+              <td>this sets the type weight. options include: thin, light, book, medium, demi-bold, bold, heavy, and
+                black.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section class="content-section utility">
+        <h3 class="section-heading" id="utility--set-zindex">z index</h3>
+        <div class="section-type section-type--mixin">mixin</div>
+        <p class="section-description">A mixin for setting the z-index.</p>
+        <p class="section-preview">
+          <pre class="section-preview__pre">
+            <code class="section-preview__code">
+.example {
+  @include zindex(modal);
+}
+            </code>
+          </pre>
+        </p>
+        <table>
+          <caption>Arguments available in the border-radius mixin</caption>
+          <thead>
+            <tr>
+              <th scope="col">argument</th>
+              <th scope="col">Default Value</th>
+              <th scope="col">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>$object</code></td>
+              <td>none</td>
+              <td>this should correspond with an item listed by the <code>$s5_zindex-order</code> variable. this sets a z-index value depending on where it falls in the list order.</td>
             </tr>
           </tbody>
         </table>
@@ -231,79 +749,67 @@
                     class="sr-only">utility</span><span class="nav__anchor-arrow">&#x2192;</span></a>
               </li>
               <li class="nav__list-item">
-                <a href="/utilities.html#utility--color" class="nav__list-anchor">Dark Mode <span
+                <a href="/utilities.html#utility--dark-mode" class="nav__list-anchor">Dark Mode <span
                     class="sr-only">utility</span><span class="nav__anchor-arrow">&#x2192;</span></a>
               </li>
               <li class="nav__list-item">
-                <a href="/utilities.html#utility--color" class="nav__list-anchor">Debugging <span
+                <a href="/utilities.html#utility--disable-text-select" class="nav__list-anchor">Disable Text Select <span
                     class="sr-only">utility</span><span class="nav__anchor-arrow">&#x2192;</span></a>
               </li>
               <li class="nav__list-item">
-                <a href="/utilities.html#utility--color" class="nav__list-anchor">Disable Text Select <span
+                <a href="/utilities.html#utility--focusable-only" class="nav__list-anchor">Focusable Only <span
                     class="sr-only">utility</span><span class="nav__anchor-arrow">&#x2192;</span></a>
               </li>
               <li class="nav__list-item">
-                <a href="/utilities.html#utility--color" class="nav__list-anchor">Focusable Only <span
+                <a href="/utilities.html#utility--media-queries" class="nav__list-anchor">Media Queries <span
                     class="sr-only">utility</span><span class="nav__anchor-arrow">&#x2192;</span></a>
               </li>
               <li class="nav__list-item">
-                <a href="/utilities.html#utility--color" class="nav__list-anchor">Media Queries <span
+                <a href="/utilities.html#utility--rem-calculator" class="nav__list-anchor">Rem Calculator <span
                     class="sr-only">utility</span><span class="nav__anchor-arrow">&#x2192;</span></a>
               </li>
               <li class="nav__list-item">
-                <a href="/utilities.html#utility--color" class="nav__list-anchor">Power <span
+                <a href="/utilities.html#utility--sr-only" class="nav__list-anchor">Screen Reader Only <span
                     class="sr-only">utility</span><span class="nav__anchor-arrow">&#x2192;</span></a>
               </li>
               <li class="nav__list-item">
-                <a href="/utilities.html#utility--color" class="nav__list-anchor">Rem Calculator <span
+                <a href="/utilities.html#utility--share-px-val" class="nav__list-anchor">Share px Value <span
                     class="sr-only">utility</span><span class="nav__anchor-arrow">&#x2192;</span></a>
               </li>
               <li class="nav__list-item">
-                <a href="/utilities.html#utility--color" class="nav__list-anchor">Screen Reader Only <span
+                <a href="/utilities.html#utility--simple-gradient" class="nav__list-anchor">Simple Gradient <span
                     class="sr-only">utility</span><span class="nav__anchor-arrow">&#x2192;</span></a>
               </li>
               <li class="nav__list-item">
-                <a href="/utilities.html#utility--color" class="nav__list-anchor">Share px Value <span
+                <a href="/utilities.html#utility--size-multiplier" class="nav__list-anchor">Size Multiplier <span
                     class="sr-only">utility</span><span class="nav__anchor-arrow">&#x2192;</span></a>
               </li>
               <li class="nav__list-item">
-                <a href="/utilities.html#utility--color" class="nav__list-anchor">Simple Gradient <span
+                <a href="/utilities.html#utility--set-type" class="nav__list-anchor">Set Type <span
                     class="sr-only">utility</span><span class="nav__anchor-arrow">&#x2192;</span></a>
               </li>
               <li class="nav__list-item">
-                <a href="/utilities.html#utility--color" class="nav__list-anchor">Size Multiplier <span
+                <a href="/utilities.html#utility--set-line-height" class="nav__list-anchor">Set Type Line Height <span
                     class="sr-only">utility</span><span class="nav__anchor-arrow">&#x2192;</span></a>
               </li>
               <li class="nav__list-item">
-                <a href="/utilities.html#utility--color" class="nav__list-anchor">Strip Unit <span
+                <a href="/utilities.html#utility--set-type-stack" class="nav__list-anchor">Set Type Stack <span
                     class="sr-only">utility</span><span class="nav__anchor-arrow">&#x2192;</span></a>
               </li>
               <li class="nav__list-item">
-                <a href="/utilities.html#utility--color" class="nav__list-anchor">Set Type <span
+                <a href="/utilities.html#utility--set-type-styles" class="nav__list-anchor">Set Type Style <span
                     class="sr-only">utility</span><span class="nav__anchor-arrow">&#x2192;</span></a>
               </li>
               <li class="nav__list-item">
-                <a href="/utilities.html#utility--color" class="nav__list-anchor">Set Type Line Height <span
+                <a href="/utilities.html#utility--set-type-weight" class="nav__list-anchor">Set Type Weight <span
                     class="sr-only">utility</span><span class="nav__anchor-arrow">&#x2192;</span></a>
               </li>
-              <li class="nav__list-item">
-                <a href="/utilities.html#utility--color" class="nav__list-anchor">Set Type Stack <span
+              <!-- <li class="nav__list-item">
+                <a href="/utilities.html#utility--shadows" class="nav__list-anchor">Shadows <span
                     class="sr-only">utility</span><span class="nav__anchor-arrow">&#x2192;</span></a>
-              </li>
+              </li> -->
               <li class="nav__list-item">
-                <a href="/utilities.html#utility--color" class="nav__list-anchor">Set Type Style <span
-                    class="sr-only">utility</span><span class="nav__anchor-arrow">&#x2192;</span></a>
-              </li>
-              <li class="nav__list-item">
-                <a href="/utilities.html#utility--color" class="nav__list-anchor">Set Type Weight <span
-                    class="sr-only">utility</span><span class="nav__anchor-arrow">&#x2192;</span></a>
-              </li>
-              <li class="nav__list-item">
-                <a href="/utilities.html#utility--color" class="nav__list-anchor">Shadows <span
-                    class="sr-only">utility</span><span class="nav__anchor-arrow">&#x2192;</span></a>
-              </li>
-              <li class="nav__list-item">
-                <a href="/utilities.html#utility--color" class="nav__list-anchor">z index <span
+                <a href="/utilities.html#utility--zindex" class="nav__list-anchor">z index <span
                     class="sr-only">utility</span><span class="nav__anchor-arrow">&#x2192;</span></a>
               </li>
             </ul>
