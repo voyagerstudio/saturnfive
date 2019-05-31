@@ -1,0 +1,42 @@
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table caption {
+  @include screen-reader-only;
+}
+
+tr th {
+  @include set-type(display, 5, demi-bold);
+  text-align: left;
+
+  th + th {
+    margin-left: set-size(10);
+  }
+}
+
+thead {
+  border-bottom: set-size(micro) solid get-color(grey, 7);
+
+  @include dark-mode {
+    border-bottom-color: get-color(black);
+  }
+}
+
+td {
+  @include set-type(interface, 5);
+  padding: set-size(2);
+}
+
+td code {
+  @include set-type(code, 5);
+}
+
+tr:nth-of-type(2n) {
+  background-color: get-color(grey, 8);
+
+  @include dark-mode {
+    background-color: get-color(grey, -8);
+  }
+}

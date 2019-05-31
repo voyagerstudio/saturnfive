@@ -1,0 +1,4 @@
+@function set-px($size) {
+  $remSize: $size / strip-unit($s5_type-root-size); // target / root type size
+  @return #{$remSize}rem;
+}

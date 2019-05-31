@@ -1,0 +1,119 @@
+.sidebar {
+  background-color: get-color(grey, 8);
+  content: '';
+  display: block;
+  width: set-size(100);
+  padding: set-size(10) 0;
+
+  @include min-width-viewport(massive) {
+    width: 30%;
+  }
+
+  @include dark-mode {
+    background-color: get-color(black);
+  }
+
+  @include max-width-viewport(md) {
+    width: 100%;
+    padding: set-size(10) set-size(20);
+  }
+}
+
+.footer-to-top {
+  @include set-type(display, 5, demi-bold);
+  @include set-type-line-height(xxs);
+  @include border-radius(6);
+  @include set-standard-shadow(5, $intensity-multiplier:30);
+  @include set-interactive-shadow(10, $intensity-multiplier:30);
+  text-decoration: none;
+  color: get-color(black);
+  background-color: get-color(white);
+  padding: set-size(3);
+  margin-top: set-size(10);
+  display: inline-block;
+}
+
+.nav_wrapper {
+  max-width: set-size(100);
+  margin: 0 auto;
+  display: block;
+
+  @include max-width-viewport(massive) {
+    max-width: set-size(60);
+  }
+
+  @include max-width-viewport(lg) {
+    max-width: set-size(60);
+  }
+
+  @include max-width-viewport(md) {
+    max-width: 100%;
+  }
+}
+
+.nav__list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.nav_wrapper > .nav__list > .nav__list-item {
+    margin-top: set-size(10);
+
+    & .nav__list .nav__list-item {
+      margin-top: set-size(1);
+    }
+}
+
+.nav__list-anchor--heading,
+.nav__list-anchor {
+  @include set-type(display, 6, book);
+  text-decoration: none;
+  color: get-color(black);
+  transform: translateX(0);
+  transition: transform 150ms ease, color 75ms ease;
+  display: inline-block;
+  padding: set-size(1) set-size(2);
+  @include border-radius(4);
+
+  & .nav__anchor-arrow {
+    right: set-px(-16);
+    display: inline-block;
+    opacity: 0;
+    transform: translateX(0);
+    transition: transform 200ms ease-in-out, opacity 75ms ease-in;
+  }
+
+  &:focus,
+  &:hover {
+    transform: translatex(set-size(3));
+    color: get-color(primary);
+    padding-right: set-size(8);
+
+    & .nav__anchor-arrow {
+      opacity: 1;
+      transform: translateX(set-size(5));
+    }
+  }
+
+  &:focus {
+    outline: none;
+    background-color: get-color(primary, 0, 25);
+  }
+
+  @include dark-mode {
+    color: get-color(white);
+  }
+}
+
+.nav__list-anchor--heading {
+  @include set-type-size(8);
+  @include set-type-weight(demi-bold);
+}
+
+.nav__list-anchor {
+  color: get-color(black, 5);
+}
+
+.sr-only {
+  @include screen-reader-only;
+}
