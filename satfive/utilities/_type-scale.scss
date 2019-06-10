@@ -2,7 +2,8 @@
 @function type-scale($step) {
   $stripped-base: (strip-unit($s5_type-scale-base));
   $font-size-calc: ($stripped-base * pow($s5_type-scale-modifier, (($step - 1))));
-  $rem-font-size: (set-px($font-size-calc));
+  $rounded-font-size: round($font-size-calc);
+  $rem-font-size: (set-px($rounded-font-size));
 
   @return $rem-font-size;
 }
