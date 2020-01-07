@@ -1,6 +1,6 @@
 {
-    "name": "@voyager-studio/saturnfive",
-    "version": "0.2.0",
+    "name": "@voyagerstudio/saturnfive",
+    "version": "2.0.4",
     "description": "A design system springboard.",
     "main": "_saturnfive.scss",
     "scripts": {
@@ -17,6 +17,7 @@
         "frontend-framework",
         "mixins"
     ],
+    "PublishConfig": { "registry": "https://npm.pkg.github.com/" },
     "author": "Taurean Bryant",
     "license": "MIT",
     "bugs": {
