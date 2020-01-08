@@ -1,0 +1,16 @@
+@use "../properties/zindex" as *;
+@use "sass:string" as *;
+
+@function get-zindex($object) {
+  @if index($s5_z-order, $object) {
+    @return (length($s5_z-order) - index($s5_z-order, $object))+1;
+  }
+
+  @else {
+    @return 'There is no object "#{$object}" in this list; choose from the following: #{$z-order}';
+  }
+}
+
+@mixin zindex($object) {
+  z-index: get-zindex($object);
+}
