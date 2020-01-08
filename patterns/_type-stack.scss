@@ -1,0 +1,5 @@
+@use "../properties/type"as *;
+
+@mixin set-type-stack($context:body) {
+    font-family: get-typestack($context);
+}
