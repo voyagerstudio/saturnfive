@@ -1,0 +1,5 @@
+@use "../properties/type" as p-type;
+
+@mixin set-type-line-height($line-height:md) {
+  line-height: p-type.get-lineheight($line-height);
+}
