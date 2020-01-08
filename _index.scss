@@ -3,6 +3,9 @@
 
 // Utilities
 @forward "utilities/border-radius";
+@forward "utilities/dark-mode";
+@forward "utilities/disable-text-select";
+@forward "utilities/focusable-only";
 @forward "utilities/pow";
 @forward "utilities/rem-calc";
 @forward "utilities/strip-unit";
