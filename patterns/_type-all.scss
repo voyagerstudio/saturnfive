@@ -1,14 +1,14 @@
-@use "type-size" as *;
-@use "type-stack" as *;
-@use "type-weight" as *;
-@use "type-lineheight" as *;
-@use "type-style" as *;
-
 @forward "type-size";
 @forward "type-stack";
 @forward "type-weight";
 @forward "type-lineheight";
 @forward "type-style";
+
+@use "type-size" as *;
+@use "type-stack" as *;
+@use "type-weight" as *;
+@use "type-lineheight" as *;
+@use "type-style" as *;
 
 @mixin set-type($type-stack:body, $font-scale:5, $weight:book, $line-height:md, $style:normal) {
   @include set-type-size($font-scale);
