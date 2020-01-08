@@ -6,7 +6,9 @@
 @forward "utilities/dark-mode";
 @forward "utilities/disable-text-select";
 @forward "utilities/focusable-only";
-@forward "utilities/pow";
+@forward "utilities/media-queries";
+@forward "utilities/pow"; // private?
 @forward "utilities/rem-calc";
-@forward "utilities/strip-unit";
-@forward "utilities/type-scale";
+@forward "utilities/strip-unit"; // private?
+@forward "utilities/type-scale"; // private
+@forward "utilities/zindex";
