@@ -1,0 +1,30 @@
+@use "strip-unit" as *;
+@use "rem-calc" as *;
+@use "sass:string" as *;
+
+@mixin border-radius($radii:5px, $radii-location:'top-right bottom-right top-left bottom-left') {
+  $radii: strip-unit($radii);
+  $radii: set-px($radii);
+  
+  background-clip: padding-box;
+  
+  @if index($radii-location, 'top-right') {
+    border-top-right-radius: $radii;
+  }
+  
+  @if index($radii-location, 'bottom-right') {
+    border-bottom-right-radius: $radii;
+  }
+  
+  @if index($radii-location, 'top-left') {
+    border-top-left-radius: $radii;
+  }
+  
+  @if index($radii-location, 'bottom-left') {
+    border-bottom-left-radius: $radii;
+  }
+  
+  @if $radii-location == null {
+    border-radius: $radii;
+  }
+}

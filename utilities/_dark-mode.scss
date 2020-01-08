@@ -1,0 +1,19 @@
+@mixin dark-mode {
+    @media (prefers-color-scheme: dark) {
+        @content;
+    }
+
+    html[color-scheme="dark"] & {
+        @content;
+    }
+}
+
+@mixin light-mode {
+    @media (prefers-color-scheme: light) {
+        @content;
+    }
+
+    html[color-scheme="light"] & {
+        @content;
+    }
+}
