@@ -1,5 +1,6 @@
 // Patterns
 @forward "patterns/type-all";
+@forward "patterns/shadows";
 
 // Utilities
 @forward "utilities/border-radius";
@@ -12,7 +13,10 @@
 @forward "utilities/pow"; // private?
 @forward "utilities/rem-calc";
 @forward "utilities/screen-reader-only";
+@forward "utilities/shadows";
 @forward "utilities/share-px-val";
+@forward "utilities/simple-gradient";
+@forward "utilities/size-multiplier";
 @forward "utilities/strip-unit"; // private?
 @forward "utilities/type-scale"; // private
 @forward "utilities/zindex";
