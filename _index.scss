@@ -1,3 +1,10 @@
+// Properties
+@forward "properties/base-units";
+@forward "properties/colors";
+@forward "properties/media-queries";
+@forward "properties/type";
+@forward "properties/zindex";
+
 // Patterns
 @forward "patterns/type-all";
 @forward "patterns/shadows";
