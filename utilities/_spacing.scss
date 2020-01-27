@@ -1,0 +1,160 @@
+@mixin padding($padding-location: 'shorthand top right bottom left', $size...) {
+
+  @if $padding-location == number {
+      @error '`#{$padding-location}` is not a valid value for $padding-location. Please set $padding-location to a string value. ';
+  }
+  @if $padding-location == undefined {
+      @error '`#{$padding-location}` is not a valid value for $padding-location. Please set $padding-location to a string value. ';
+  }
+  $padding-location: quote($padding-location);
+
+  @if length($size)==1 {
+    $size-val: nth($size, 1);
+    $size-val: strip-unit($size-val);
+    $size-rem: set-px($size-val);
+    $size-output: $size-rem;
+
+    @if str-index($padding-location, 'shorthand') {
+      padding: $size-output;
+    }
+
+    @if str-index($padding-location, 'top') {
+      padding-top: $size-output;
+    }
+
+    @if str-index($padding-location, 'right') {
+      padding-right: $size-output;
+    }
+
+    @if str-index($padding-location, 'bottom') {
+      padding-bottom: $size-output;
+    }
+
+    @if str-index($padding-location, 'left') {
+      padding-left: $size-output;
+    }
+  }
+
+  @else if length($size)==2 {
+
+    // checks for incorrect padding-location values
+    @if str-index($padding-location, 'top') {
+      @error '`#{$padding-location}` is not a valid value for $padding-location when two $size values are set. please set $padding-location to `shorthand`. ';
+    }
+
+    @if str-index($padding-location, 'right') {
+      @error '`#{$padding-location}` is not a valid value for $padding-location when two $size values are set. please set $padding-location to `shorthand`. ';
+    }
+
+    @if str-index($padding-location, 'bottom') {
+      @error '`#{$padding-location}` is not a valid value for $padding-location when two $size values are set. please set $padding-location to `shorthand`. ';
+    }
+
+    @if str-index($padding-location, 'left') {
+      @error '`#{$padding-location}` is not a valid value for $padding-location when two $size values are set. please set $padding-location to `shorthand`. ';
+    }
+
+    @if str-index($padding-location, 'shorthand') {
+      $top-bottom-val: nth($size, 1);
+      $top-bottom-strip: strip-unit($top-bottom-val);
+      $top-bottom-rem: set-px($top-bottom-strip);
+      $top-bottom-output: $top-bottom-rem;
+
+      $left-right-val: nth($size, 2);
+      $left-right-strip: strip-unit($left-right-val);
+      $left-right-rem: set-px($left-right-strip);
+      $left-right-output: $left-right-rem;
+
+
+      padding: $top-bottom-output $left-right-output;
+    }
+  }
+
+  @else if length($size)==3 {
+
+    // checks for incorrect padding-location values
+    @if str-index($padding-location, 'top') {
+      @error '`#{$padding-location}` is not a valid value for $padding-location when three $size values are set. please set $padding-location to `shorthand`. ';
+    }
+
+    @if str-index($padding-location, 'right') {
+      @error '`#{$padding-location}` is not a valid value for $padding-location when three $size values are set. please set $padding-location to `shorthand`. ';
+    }
+
+    @if str-index($padding-location, 'bottom') {
+      @error '`#{$padding-location}` is not a valid value for $padding-location when three $size values are set. please set $padding-location to `shorthand`. ';
+    }
+
+    @if str-index($padding-location, 'left') {
+      @error '`#{$padding-location}` is not a valid value for $padding-location when three $size values are set. please set $padding-location to `shorthand`. ';
+    }
+
+    @if str-index($padding-location, 'shorthand') {
+      $top-val: nth($size, 1);
+      $top-strip: strip-unit($top-val);
+      $top-rem: set-px($top-strip);
+      $top-output: $top-rem;
+
+      $left-right-val: nth($size, 2);
+      $left-right-strip: strip-unit($left-right-val);
+      $left-right-rem: set-px($left-right-strip);
+      $left-right-output: $left-right-rem;
+
+      $bottom-val: nth($size, 3);
+      $bottom-strip: strip-unit($bottom-val);
+      $bottom-rem: set-px($bottom-strip);
+      $bottom-output: $bottom-rem;
+
+      padding: $top-output $left-right-output $bottom-output;
+    }
+  }
+
+  @else if length($size)==4 {
+
+    // checks for incorrect padding-location values
+    @if str-index($padding-location, 'top') {
+      @error '`#{$padding-location}` is not a valid value for $padding-location when four $size values are set. please set $padding-location to `shorthand`. ';
+    }
+
+    @if str-index($padding-location, 'right') {
+      @error '`#{$padding-location}` is not a valid value for $padding-location when four $size values are set. please set $padding-location to `shorthand`. ';
+    }
+
+    @if str-index($padding-location, 'bottom') {
+      @error '`#{$padding-location}` is not a valid value for $padding-location when four $size values are set. please set $padding-location to `shorthand`. ';
+    }
+
+    @if str-index($padding-location, 'left') {
+      @error '`#{$padding-location}` is not a valid value for $padding-location when four $size values are set. please set $padding-location to `shorthand`. ';
+    }
+
+    @if str-index($padding-location, 'shorthand') {
+      $top-val: nth($size, 1);
+      $top-strip: strip-unit($top-val);
+      $top-rem: set-px($top-strip);
+      $top-output: $top-rem;
+
+      $right-val: nth($size, 2);
+      $right-strip: strip-unit($right-val);
+      $right-rem: set-px($right-strip);
+      $right-output: $right-rem;
+
+      $bottom-val: nth($size, 3);
+      $bottom-strip: strip-unit($bottom-val);
+      $bottom-rem: set-px($bottom-strip);
+      $bottom-output: $bottom-rem;
+
+      $left-val: nth($size, 4);
+      $left-strip: strip-unit($left-val);
+      $left-rem: set-px($left-strip);
+      $left-output: $left-rem;
+
+      padding: $top-output $right-output $bottom-output $left-output;
+    }
+  }
+
+  @else if length($size)>4 {
+    $size-count: length($size) - 4;
+    @error 'You have included #{$size-count} too many size arguments. please restrict `$size` to at the most four values';
+  }
+}
