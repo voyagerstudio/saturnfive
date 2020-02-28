@@ -1,6 +1,7 @@
 @use "strip-unit" as *;
 @use "rem-calc" as *;
 
+// TODO: Look into updating with sass:string 
 @mixin padding($padding-location: 'shorthand top right bottom left', $size...) {
 
   @if $padding-location == number {
