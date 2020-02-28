@@ -1,4 +1,4 @@
-@use "../properties/media-queries" as *;
+@use "../tokens/media-queries" as *;
 
 @mixin min-width-viewport($viewport) {
   @media screen and (min-width: get-viewport($viewport)) {

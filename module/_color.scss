@@ -1,6 +1,6 @@
-@use "../properties/colors" as *;
-@use "sass:map" as *;
+@use "../tokens/colors" as *;
 @use "strip-unit" as *;
+@use "sass:map" as *;
 @use "sass:math" as *;
 
 @function get-color($color-input, $step:0, $opacity:100%) {
