@@ -1,30 +1,25 @@
-// Properties
+// Tokens
 @forward "tokens/base-units";
 @forward "tokens/colors";
 @forward "tokens/media-queries";
 @forward "tokens/type";
 @forward "tokens/zindex";
 
-// Patterns
-@forward "patterns/type-all";
-@forward "patterns/rice-paper";
-@forward "patterns/shadows";
-
-// Utilities
-@forward "utilities/border-radius";
-@forward "utilities/color";
-@forward "utilities/dark-mode";
-@forward "utilities/debug";
-@forward "utilities/disable-text-select";
-@forward "utilities/focusable-only";
-@forward "utilities/media-queries";
-@forward "utilities/pow"; // private?
-@forward "utilities/rem-calc";
-@forward "utilities/screen-reader-only";
-@forward "utilities/shadows";
-@forward "utilities/share-px-val";
-@forward "utilities/simple-gradient";
-@forward "utilities/size-multiplier";
-@forward "utilities/strip-unit"; // private?
-@forward "utilities/type-scale"; // private
-@forward "utilities/zindex";
+// Modules
+@forward "module/type-all";
+@forward "module/rice-paper";
+@forward "module/shadows";
+@forward "module/border-radius";
+@forward "module/color";
+@forward "module/dark-mode";
+@forward "module/debug";
+@forward "module/disable-text-select";
+@forward "module/focusable-only";
+@forward "module/media-queries";
+@forward "module/rem-calc";
+@forward "module/screen-reader-only";
+@forward "module/shadows";
+@forward "module/share-px-val";
+@forward "module/simple-gradient";
+@forward "module/size-multiplier";
+@forward "module/zindex";
