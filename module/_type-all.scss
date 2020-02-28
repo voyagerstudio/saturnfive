@@ -1,0 +1,74 @@
+@forward "type-size";
+@forward "type-stack";
+@forward "type-weight";
+@forward "type-lineheight";
+@forward "type-style";
+
+@use "type-size" as *;
+@use "type-stack" as *;
+@use "type-weight" as *;
+@use "type-lineheight" as *;
+@use "type-style" as *;
+
+@mixin set-type($type-stack:body, $font-scale:5, $weight:book, $style:normal) {
+  @include set-type-stack($type-stack);
+  @include set-type-size($font-scale);
+  @include set-type-weight($weight);
+  @include set-type-style($style);
+
+  // Line Heights should generally be larger
+  // when the characters per line is longer and
+  // smaller when the characters per line is shorter
+  // for greater legibility
+  // 
+  // users can override this by using the
+  // `set-type-line-height` mixin themselves
+  // 
+  @if $type-stack == monospace {
+    @include set-type-line-height(md);
+  }
+
+  @if $type-stack == sans-serif {
+    @include set-type-line-height(md);
+  }
+
+  @if $type-stack == serif {
+    @include set-type-line-height(md);
+  }
+
+  @if $type-stack == display {
+    @include set-type-line-height(sm);
+  }
+
+  @if $type-stack == masthead {
+    @include set-type-line-height(xs);
+  }
+
+  @if $type-stack == body {
+    @include set-type-line-height(md);
+  }
+
+  @if $type-stack == text {
+    @include set-type-line-height(md);
+  }
+
+  @if $type-stack == code {
+    @include set-type-line-height(md);
+  }
+
+  @if $type-stack == interface {
+    @include set-type-line-height(xxs);
+  }
+
+  @if $type-stack == caption {
+    @include set-type-line-height(lg);
+  }
+
+  @if $type-stack == aside {
+    @include set-type-line-height(md);
+  }
+
+  @if $type-stack == blockquote {
+    @include set-type-line-height(sm);
+  }
+}
