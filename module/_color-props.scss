@@ -1,0 +1,18 @@
+@use "../tokens/colors" as *;
+
+@mixin set-background() {}
+
+@mixin text-color($color, $step:0, $opacity:100) {}
+
+@mixin border-color() {
+ // future i18n support - https://developer.mozilla.org/en-US/docs/Web/CSS/border-block-color
+}
+
+@mixin border-color-x-start() {}
+@mixin border-color-x-end() {}
+@mixin border-color-y-start() {}
+@mixin border-color-y-end() {}
+
+@mixin outline-color($color, $step:0, $opacity:100) {
+
+}

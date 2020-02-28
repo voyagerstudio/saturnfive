@@ -1,4 +1,4 @@
-@use "../properties/type" as prop-type;
+@use "../tokens/type" as prop-type;
 @use "strip-unit" as strip-unit;
 
 @function set-px($size) {
