@@ -1,4 +1,4 @@
-@use "../properties/type"as *;
+@use "../tokens/type"as *;
 
 @mixin set-type-stack($context:body) {
     font-family: get-typestack($context);
