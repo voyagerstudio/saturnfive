@@ -1,9 +1,6 @@
-@use "../utilities/shadows" as *;
-@use "../utilities/share-px-val"as *;
-@use "../utilities/rem-calc" as *;
-
-@use "color"as *;
-@use "rem-calc"as *;
+@use "share-px-val"as *;
+@use "rem-calc" as *;
+@use "color" as *;
 
 @function get-shadow($step:0, $color:black, $intensity-multiplier:1) {
   $box-shadow-props: ();

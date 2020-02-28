@@ -1,3 +1,5 @@
+@use "../tokens/colors" as *;
+
 @mixin set-background() {}
 
 @mixin text-color($color, $step:0, $opacity:100) {}

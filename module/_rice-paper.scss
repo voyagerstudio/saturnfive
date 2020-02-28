@@ -1,5 +1,5 @@
-@use "../utilities/color" as *;
-@use "../utilities/size-multiplier" as *;
+@use "color" as *;
+@use "size-multiplier" as *;
 // @use "sass:color" as *;
 
 @mixin ricepaper($type:light,$intensity:4) {
