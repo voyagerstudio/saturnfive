@@ -4,7 +4,8 @@
     "description": "A design system springboard.",
     "main": "_saturnfive.scss",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "compile-testbed": "sass --watch testbed/scss/style.scss:testbed/style.css"
     },
     "repository": {
         "type": "git",

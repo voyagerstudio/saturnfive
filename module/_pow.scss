@@ -1,6 +1,6 @@
 // Power Function
 // via - https://www.bhalash.com/archives/13544805657
-
+// duplicated by math.pow() in sass:math
 @function pow($number, $power) {
   $exponent: 1;
 

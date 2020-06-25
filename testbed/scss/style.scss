@@ -1,0 +1,11 @@
+// Sets configured variable values for Saturn V
+@use "config" as *;
+
+// Imports Saturn V
+@use "../../index" as *;
+
+// Imports Styles for the Full page
+@use "global";
+
+// Module Tests
+@use "module/border-radius";
