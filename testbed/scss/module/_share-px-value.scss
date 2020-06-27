@@ -1,0 +1,7 @@
+@use "../../../index" as *;
+
+.demo--share-px-value .demo__element {
+    background-color: get-color(black);
+    @include set-type(interface, 4);
+    @include share-px-value(margin, padding, 5px);
+}

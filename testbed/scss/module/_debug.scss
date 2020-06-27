@@ -1,0 +1,11 @@
+@use "../../../index" as *;
+
+.demo--debug-overlay {
+    @include debug-overlay;
+}
+
+.demo--debug-overlay .demo__element {
+    background-color: get-color(blue);
+    @include set-type(interface, 5);
+    padding: set-size(1);
+}

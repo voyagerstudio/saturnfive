@@ -1,0 +1,34 @@
+@use "../../../index"as *;
+
+.demo--get-shadow .demo__element {
+    @include border-radius(5);
+    @include set-type(interface, 4);
+    background: get-color(red, -1);
+    color: get-color(white);
+    padding: 20px;
+    box-shadow: get-shadow(5, red, 2);
+}
+
+.demo--set-standard-shadow .demo__element {
+    @include border-radius(5);
+    @include set-type(interface, 4);
+    @include set-standard-shadow(5, red, 2);
+    background: get-color(red, -1);
+    color: get-color(white);
+    padding: 20px;
+}
+
+.demo--set-interactive-shadow .demo__element {
+    @include border-radius(5);
+    @include set-type(interface, 4);
+    @include set-standard-shadow(5, red, 2);
+    @include set-interactive-shadow(10, red, 2);
+    background: get-color(red, -1);
+    color: get-color(white);
+    padding: 20px;
+    cursor: pointer;
+
+    &:after {
+        @include border-radius(5);
+    }
+}

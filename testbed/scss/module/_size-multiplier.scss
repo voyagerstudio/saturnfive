@@ -1,0 +1,7 @@
+@use "../../../index"as *;
+
+.demo--set-size .demo__element {
+    @include set-type(interface, 4);
+    background-color: get-color(black);
+    width: set-size(50);
+}

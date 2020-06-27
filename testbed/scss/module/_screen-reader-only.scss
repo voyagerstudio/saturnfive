@@ -1,0 +1,5 @@
+@use "../../../index"as *;
+
+.demo--screen-reader-only .demo__element {
+    @include screen-reader-only;
+}

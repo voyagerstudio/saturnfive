@@ -1,0 +1,7 @@
+@use "../../../index"as *;
+
+.demo--zindex .demo__element {
+    @include set-type(interface, 4);
+    color: get-color(gray);
+    position: relative;
+}

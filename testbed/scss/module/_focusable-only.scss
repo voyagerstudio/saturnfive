@@ -1,0 +1,12 @@
+@use "../../../index"as *;
+
+.demo--focusable-only .demo__element {
+    @include focusable-only;
+    color: black;
+    outline: 1px solid red;
+    @include focusable-only-styles {
+        @include border-radius(4);
+        outline: 1px solid blue;
+        padding: 20px;
+    }
+}

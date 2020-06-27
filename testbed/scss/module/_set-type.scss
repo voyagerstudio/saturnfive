@@ -1,0 +1,42 @@
+@use "../../../index" as *;
+
+.demo--set-type .demo__element {
+    @include set-type(display, 10, light, oblique);
+    color: get-color(black);
+    position: relative;
+}
+
+.demo--set-type-lineheight .demo__element {
+    @include set-type(display, 10);
+    @include set-type-line-height(xl);
+    color: get-color(black);
+    position: relative;
+}
+
+.demo--set-type-size .demo__element {
+    @include set-type(display, 10);
+    @include set-type-size(6);
+    color: get-color(black);
+    position: relative;
+}
+
+.demo--set-type-stack .demo__element {
+    @include set-type(display, 10);
+    @include set-type-stack(code);
+    color: get-color(black);
+    position: relative;
+}
+
+.demo--set-type-style .demo__element {
+    @include set-type(display, 10);
+    @include set-type-style(oblique);
+    color: get-color(black);
+    position: relative;
+}
+
+.demo--set-type-weight .demo__element {
+    @include set-type(display, 10);
+    @include set-type-weight(black);
+    color: get-color(black);
+    position: relative;
+}

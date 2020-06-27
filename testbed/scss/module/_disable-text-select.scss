@@ -1,8 +1,8 @@
 @use "../../../index" as *;
 
-.demo--border-radius .demo__element {
+.demo--disable-text-select .demo__element {
+    @include disable-text-select;
     background-color: get-color(black);
-    @include border-radius(10, 'top-left bottom-left');
     padding: 5px;
     @include set-type(interface, 4);
 }
