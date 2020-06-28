@@ -1,0 +1,119 @@
+@use "sass:map";
+
+// Fontstacks
+$s5_typestack--monospace: "Andale Mono",
+AndaleMono,
+monospace !default;
+$s5_typestack--sans-serif: sans-serif !default;
+$s5_typestack--serif: serif !default;
+
+$s5_typestack--display: BlinkMacSystemFont,
+-apple-system,
+"Roboto",
+"Droid Sans",
+"Segoe UI",
+"Helvetica Neue",
+Helvetica,
+Arial,
+sans-serif !default;
+$s5_typestack--masthead: $s5_typestack--display !default;
+$s5_typestack--body: $s5_typestack--display !default;
+$s5_typestack--text: $s5_typestack--body !default;
+$s5_typestack--code: $s5_typestack--monospace !default;
+$s5_typestack--interface: $s5_typestack--display !default;
+
+$s5_typestack--caption: $s5_typestack--display !default;
+$s5_typestack--aside: $s5_typestack--display !default;
+$s5_typestack--blockquote: $s5_typestack--display !default;
+
+// Font Weights
+$s5_weight--thin: 100 !default;
+$s5_weight--extra-light: 200 !default;
+$s5_weight--light: 300 !default;
+$s5_weight--book: 400 !default;
+$s5_weight--medium: 500 !default;
+$s5_weight--demi-bold: 600 !default;
+$s5_weight--bold: 700 !default;
+$s5_weight--heavy: 800 !default;
+$s5_weight--black: 900 !default;
+
+// Line Heights
+$s5_line-height-xxs: 1 !default;
+$s5_line-height-xs: 1.2 !default;
+$s5_line-height-sm: 1.4 !default;
+$s5_line-height-md: 1.6 !default;
+$s5_line-height-lg: 2 !default;
+$s5_line-height-xl: 3 !default;
+
+// Type Scale Modifiers
+$s5_type-scale-modifier: 1.125 !default;
+$s5_type-scale-base: 10px !default;
+$s5_type-root-size: 16px !default;
+
+$s5_map--typestack: (monospace: $s5_typestack--monospace,
+    sans-serif: $s5_typestack--sans-serif,
+    serif: $s5_typestack--serif,
+    display: $s5_typestack--display,
+    masthead: $s5_typestack--masthead,
+    body: $s5_typestack--body,
+    text: $s5_typestack--text,
+    code: $s5_typestack--code,
+    interface: $s5_typestack--interface,
+    caption: $s5_typestack--caption,
+    aside: $s5_typestack--aside,
+    blockquote: $s5_typestack--blockquote);
+
+
+@function get-typestack($typestack) {
+    @if map-has-key($s5_map--typestack, $typestack) {
+        $typestack: map-get($s5_map--typestack, $typestack);
+
+        @return $typestack;
+    }
+
+    @else if not map-has-key($s5_map--typestack, $typestack) {
+        @error 'the typestack shorthand "#{$typestack}" is not a valid option. please choose from the following options: `#{map-keys($s5_map--typestack)}`.';
+    }
+}
+
+$s5_map--typeweight: (thin: $s5_weight--thin,
+    light: $s5_weight--light,
+    book: $s5_weight--book,
+    medium: $s5_weight--medium,
+    demi-bold: $s5_weight--demi-bold,
+    bold: $s5_weight--bold,
+    heavy: $s5_weight--heavy,
+    black: $s5_weight--black,
+);
+
+@function get-typeweight($typeweight) {
+    @if map-has-key($s5_map--typeweight, $typeweight) {
+        $typeweight: map-get($s5_map--typeweight, $typeweight);
+
+        @return $typeweight;
+    }
+
+    @else if not map-has-key($s5_map--typeweight, $typeweight) {
+        @error 'the type-weight "#{$typeweight}" is not a valid option. please choose from the following options: `#{map-has-keys($s5_map--typeweight)}`.';
+    }
+}
+
+$s5_map--lineheight: (xxs: $s5_line-height-xxs,
+    xs: $s5_line-height-xs,
+    sm: $s5_line-height-sm,
+    md: $s5_line-height-md,
+    lg: $s5_line-height-lg,
+    xl: $s5_line-height-xl,
+);
+
+@function get-lineheight($lineheight) {
+    @if map-has-key($s5_map--lineheight, $lineheight) {
+        $lineheight: map-get($s5_map--lineheight, $lineheight);
+
+        @return $lineheight;
+    }
+
+    @else if not map-has-key($s5_map--lineheight, $lineheight) {
+        @error 'the font-weight "#{$lineheight}" is not a valid option. please choose from the following options: `#{map-has-keys($s5_map--lineheight)}`.';
+    }
+}

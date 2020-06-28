@@ -1,0 +1,23 @@
+@use "../tokens/base-units" as *;
+@use "strip-unit" as *;
+@use "rem-calc" as *;
+
+@function set-size($multiplier:'1') {
+  $unit: strip-unit($s5_foundation-unit-size);
+
+  @if $multiplier=='pixel' {
+    $calculated-unit: 1;
+    @return set-px($calculated-unit);
+  }
+
+  @else if $multiplier=='micro' {
+    $calculated-unit: 2;
+    @return set-px($calculated-unit);
+  }
+
+  @else if $multiplier>=0 {
+    $calculated-unit: $unit * $multiplier;
+
+    @return set-px($calculated-unit);
+  }
+}

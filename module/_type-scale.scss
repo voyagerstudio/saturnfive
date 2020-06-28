@@ -1,0 +1,14 @@
+@use "../tokens/type" as *;
+@use "strip-unit" as *;
+@use "sass:math";
+@use "rem-calc" as *;
+
+// Font size calculator
+@function type-scale($step) {
+  $stripped-base: (strip-unit($s5_type-scale-base));
+  $font-size-calc: ($stripped-base * math.pow($s5_type-scale-modifier, (($step - 1))));
+  $rounded-font-size: round($font-size-calc);
+  $rem-font-size: (set-px($rounded-font-size));
+
+  @return $rem-font-size;
+}

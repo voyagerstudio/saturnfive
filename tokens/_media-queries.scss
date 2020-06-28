@@ -1,0 +1,31 @@
+@use "sass:map";
+
+$s5_viewport-micro: 360px !default;
+$s5_viewport-xs: 600px !default;
+$s5_viewport-sm: 800px !default;
+$s5_viewport-md: 1000px !default;
+$s5_viewport-lg: 1200px !default;
+$s5_viewport-xl: 1600px !default;
+$s5_viewport-massive: 2000px !default;
+
+$s5_map--viewport: (
+  micro: $s5_viewport-micro,
+  xs: $s5_viewport-xs,
+  sm: $s5_viewport-sm,
+  md: $s5_viewport-md,
+  lg: $s5_viewport-lg,
+  xl: $s5_viewport-xl,
+  massive: $s5_viewport-massive,
+);
+
+@function get-viewport($viewport) {
+  @if map-has-key($s5_map--viewport, $viewport) {
+    $viewport: map-get($s5_map--viewport, $viewport);
+    
+    @return $viewport;
+  }
+  
+  @else if not map-has-key($s5_map--viewport, $viewport) {
+    @error 'the viewport "#{$viewport}" is not a valid option. please choose from the following options: `#{map-keys($s5_map--viewport)}`.';
+  }
+}

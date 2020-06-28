@@ -1,0 +1,14 @@
+@use "../../../index" as *;
+
+.demo--margin .demo__element {
+    @include set-type(interface, 4);
+    @include margin('right bottom', 20px);
+    background-color: get-color(black);
+}
+
+.demo--padding .demo__element {
+    @include set-type(interface, 4);
+    @include margin('shorthand', 5px);
+    @include padding('right bottom', 20px);
+    background-color: get-color(black);
+}

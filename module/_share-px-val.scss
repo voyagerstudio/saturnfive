@@ -1,0 +1,12 @@
+@use "strip-unit" as *;
+@use "rem-calc" as *;
+
+@mixin share-px-value($props...) {
+  $grab-val: nth($props, -1);
+  $unitless-val: strip-unit($grab-val);
+  $rem-val: set-px($unitless-val);
+
+  @for $i from 1 to length($props) {
+    #{nth($props, $i)}: $rem-val;
+  }
+}

@@ -1,0 +1,40 @@
+@use "color" as *;
+@use "size-multiplier" as *;
+// @use "sass:color" as *;
+
+@mixin ricepaper($type:light,$intensity:4) {
+  
+  @if $type == 'light' {
+    @supports (-webkit-backdrop-filter: blur()) {
+    // & {
+        -webkit-backdrop-filter: saturate(360%) blur(#{set-size($intensity)});
+        background-color: get-color(soft-white, 0, 80);
+    // }
+  }
+  
+  background-color: get-color(soft-white, 0, 96);
+  }
+  
+  @if $type == 'medium' {
+    @supports (-webkit-backdrop-filter: blur()) {
+    // & {
+      -webkit-backdrop-filter: saturate(360%) blur(#{set-size($intensity)});
+      background-color: get-color(grey, 0, 80);
+    // }
+  }
+  
+  background-color: get-color(grey, 0, 97);
+  }
+  
+  @if $type == 'dark' {
+    @supports (-webkit-backdrop-filter: blur()) {
+    // & {
+        -webkit-backdrop-filter: saturate(360%) blur(#{set-size($intensity)});
+        background-color: get-color(soft-black, 0, 85);
+    // }
+  }
+  
+  background-color: get-color(soft-black, 0, 93);
+  }
+  
+}

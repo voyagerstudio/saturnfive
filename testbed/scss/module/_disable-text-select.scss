@@ -1,0 +1,8 @@
+@use "../../../index" as *;
+
+.demo--disable-text-select .demo__element {
+    @include disable-text-select;
+    background-color: get-color(black);
+    padding: 5px;
+    @include set-type(interface, 4);
+}

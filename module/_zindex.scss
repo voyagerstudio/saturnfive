@@ -1,0 +1,17 @@
+@use "../tokens/zindex" as *;
+@use "sass:string" as *;
+@use "sass:list" as list;
+
+@function get-zindex($object) {
+  @if list.index($s5_z-order, $object) {
+    @return (list.length($s5_z-order) - list.index($s5_z-order, $object))+1;
+  }
+
+  @else {
+    @return 'There is no object "#{$object}" in this list; choose from the following: #{$z-order}';
+  }
+}
+
+@mixin zindex($object) {
+  z-index: get-zindex($object);
+}

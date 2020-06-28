@@ -1,0 +1,33 @@
+@use "zindex" as *;
+
+@mixin focusable-only {
+  &:not(#specificity-override) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+
+    &:active,
+    &:focus,
+    &:focus-within {
+      @include zindex(focusable-only);
+      width: auto;
+      height: auto;
+      margin: 0;
+      clip: auto;
+      overflow: visible;
+    }
+  }
+}
+
+@mixin focusable-only-styles {
+  &:not(#specificity-override):active,
+  &:not(#specificity-override):focus,
+  &:not(#specificity-override):focus-within {
+    @content;
+  }
+}

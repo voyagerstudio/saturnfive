@@ -1,0 +1,20 @@
+@use "../../../index"as *;
+
+.demo--min-width-viewport .demo__element,
+.demo--max-width-viewport .demo__element {
+    @include set-type(interface, 4);
+    background-color: get-color(black);
+    padding: 5px;
+}
+
+.demo--min-width-viewport .demo__element {
+    @include min-width-viewport(sm) {
+        background-color: get-color(red);
+    }
+}
+
+.demo--max-width-viewport .demo__element {
+    @include max-width-viewport(sm) {
+        background-color: get-color(red);
+    }
+}

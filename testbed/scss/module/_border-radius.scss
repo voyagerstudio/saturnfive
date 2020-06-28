@@ -1,0 +1,8 @@
+@use "../../../index" as *;
+
+.demo--border-radius .demo__element {
+    background-color: get-color(black);
+    @include border-radius(10, 'top-left bottom-left');
+    padding: 5px;
+    @include set-type(interface, 4);
+}

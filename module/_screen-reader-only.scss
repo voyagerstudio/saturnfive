@@ -1,0 +1,17 @@
+@mixin screen-reader-only {
+  &:not(#specificity-override) {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    height: .1rem;
+    margin: -.1rem;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: .0001rem;
+    display: inline-block;
+    white-space: nowrap;
+    right: 0;
+  }
+}

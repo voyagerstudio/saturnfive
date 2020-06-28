@@ -1,0 +1,13 @@
+@use "../../../index"as *;
+
+.demo--ricepaper {
+   background-image: url('https://eoimages.gsfc.nasa.gov/images/imagerecords/146000/146892/namibia_oli_2020130_lrg.jpg');
+}
+
+.demo--ricepaper .demo__element {
+    @include set-type(interface, 4);
+    @include ricepaper($intensity:1);
+    @include border-radius(10);
+    color: black;
+    padding: set-size(8);
+}

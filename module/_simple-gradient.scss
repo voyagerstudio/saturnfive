@@ -1,0 +1,35 @@
+@use "color" as *;
+
+@function simple-gradient($gradient-color, $lightness:base) {
+  $gradient-val: ();
+
+  @if ($lightness==darkest) {
+    $gradient-val: -webkit-linear-gradient(get-color($gradient-color, -3), get-color($gradient-color, -4), get-color($gradient-color, -6));
+  }
+
+  @if ($lightness==darker) {
+    $gradient-val: -webkit-linear-gradient(get-color($gradient-color, -1), get-color($gradient-color, -3), get-color($gradient-color, -4));
+  }
+
+  @if ($lightness==dark) {
+    $gradient-val: -webkit-linear-gradient(get-color($gradient-color), get-color($gradient-color, -1), get-color($gradient-color, -3));
+  }
+
+  @if ($lightness==base) {
+    $gradient-val: -webkit-linear-gradient(get-color($gradient-color, 2), get-color($gradient-color), get-color($gradient-color, -2));
+  }
+
+  @if ($lightness==light) {
+    $gradient-val: -webkit-linear-gradient(get-color($gradient-color, 3), get-color($gradient-color, 1), get-color($gradient-color));
+  }
+
+  @if ($lightness==lighter) {
+    $gradient-val: -webkit-linear-gradient(lighten(get-color($gradient-color, 4), 5%), lighten(get-color($gradient-color, 2), 5%), lighten(get-color($gradient-color, 1), 5%));
+  }
+
+  @if ($lightness==lightest) {
+    $gradient-val: -webkit-linear-gradient(lighten(get-color($gradient-color, 6), 5%), lighten(get-color($gradient-color, 4), 5%), lighten(get-color($gradient-color, 2), 5%));
+  }
+
+  @return $gradient-val;
+}

@@ -1,0 +1,7 @@
+@use "../../../index"as *;
+
+.demo--simple-gradient .demo__element {
+    background: simple-gradient(blue);
+    @include set-type(interface, 4);
+    @include share-px-value(margin, padding, 5px);
+}

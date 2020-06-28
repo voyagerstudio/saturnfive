@@ -1,0 +1,5 @@
+@use "../tokens/type" as *;
+
+@mixin set-type-line-height($line-height:md) {
+  line-height: get-lineheight($line-height);
+}

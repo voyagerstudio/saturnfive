@@ -1,0 +1,25 @@
+@use "../../../index"as *;
+
+.demo--get-color {
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.demo--get-color .demo__element {
+    background-color: get-color(gray);
+    @include set-type(interface, 4);
+    margin: set-size(2) 0;
+    padding: set-size(1);
+}
+
+.demo--get-color .demo__element--red1 {
+    background-color: get-color(red);
+}
+
+.demo--get-color .demo__element--red2 {
+    background-color: get-color(red, 5);
+}
+
+.demo--get-color .demo__element--red3 {
+    background-color: get-color(red, -5);
+}

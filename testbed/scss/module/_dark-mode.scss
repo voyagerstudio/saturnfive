@@ -1,0 +1,25 @@
+@use "../../../index" as *;
+
+.demo--dark-mode .demo__element,
+.demo--light-mode .demo__element {
+    background-color: get-color(gray);
+    @include set-type(interface, 4);
+    margin: set-size(2) 0;
+    padding: set-size(1);
+}
+
+.demo--dark-mode .demo__element {
+    background-color: get-color(red);
+
+    @include dark-mode {
+        background-color: get-color(blue);
+    }
+}
+
+.demo--light-mode .demo__element {
+    background-color: get-color(orange);
+
+    @include light-mode {
+        background-color: get-color(green);
+    }
+}

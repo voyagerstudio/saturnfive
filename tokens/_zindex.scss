@@ -1,0 +1,12 @@
+@use "sass:list";
+
+$s5_zindex-order: "example-one",
+"example-two",
+"example-three"
+ !default;
+
+$s5_permanent-z-order: "debug",
+"focusable-only";
+
+
+$s5_z-order: join($s5_permanent-z-order, $s5_zindex-order);

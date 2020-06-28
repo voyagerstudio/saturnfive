@@ -1,0 +1,7 @@
+@use "../tokens/type" as prop-type;
+@use "strip-unit" as strip-unit;
+
+@function set-px($size) {
+    $remSize: $size / strip-unit.strip-unit(prop-type.$s5_type-root-size); // target / root type size
+    @return #{$remSize}rem;
+}

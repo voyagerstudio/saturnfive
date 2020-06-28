@@ -1,0 +1,566 @@
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  background-color: #0d0c0c;
+}
+
+.header,
+.content-wrapper {
+  max-width: 37.5rem;
+  padding: 1.25rem 0.625rem;
+  margin: 0rem auto;
+}
+
+.header__heading {
+  font-family: BlinkMacSystemFont, -apple-system, "Roboto", "Droid Sans", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 1.4;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 5px;
+  color: white;
+}
+
+.header__nav-list {
+  list-style-type: none;
+  padding: 0 0 20px;
+  display: block;
+  border-bottom: 2px solid white;
+}
+
+.header__nav-item {
+  display: inline-block;
+  padding: 0;
+}
+
+.header__nav-item + .header__nav-item {
+  padding: 8px 8px 8px 0;
+}
+
+.header__nav-link {
+  font-family: BlinkMacSystemFont, -apple-system, "Roboto", "Droid Sans", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1;
+  background-color: rgba(250, 252, 252, 0.5);
+  padding: 4px;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #fafcfc;
+  scroll-behavior: smooth;
+  border: 1px solid transparent;
+}
+.header__nav-link[disabled], .header__nav-link[aria-disabled=true] {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.header__nav-link:hover, .header__nav-link:focus {
+  text-decoration: underline;
+}
+.header__nav-link:focus {
+  outline: none;
+  border-color: white;
+}
+
+.section {
+  color: white;
+}
+
+.section + .section {
+  margin-top: 3.5rem;
+}
+
+.section__heading {
+  font-family: BlinkMacSystemFont, -apple-system, "Roboto", "Droid Sans", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.125rem;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 1.4;
+}
+
+.section__description {
+  font-family: BlinkMacSystemFont, -apple-system, "Roboto", "Droid Sans", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.6;
+}
+
+.demo {
+  display: flex;
+  background-color: white;
+  width: 100%;
+  min-height: 200px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+}
+
+.back-to-top {
+  font-family: BlinkMacSystemFont, -apple-system, "Roboto", "Droid Sans", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.4375rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1;
+  background-clip: padding-box;
+  border-top-right-radius: 0.625rem;
+  border-bottom-right-radius: 0.625rem;
+  border-top-left-radius: 0.625rem;
+  border-bottom-left-radius: 0.625rem;
+  display: block;
+  text-decoration: none;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  margin: 2.5rem 0;
+  text-align: center;
+}
+
+.demo--border-radius .demo__element {
+  background-color: black;
+  background-clip: padding-box;
+  border-top-left-radius: 0.625rem;
+  border-bottom-left-radius: 0.625rem;
+  padding: 5px;
+  font-family: BlinkMacSystemFont, -apple-system, "Roboto", "Droid Sans", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1;
+}
+
+.demo--get-color {
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.demo--get-color .demo__element {
+  background-color: gray;
+  font-family: BlinkMacSystemFont, -apple-system, "Roboto", "Droid Sans", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1;
+  margin: 0.5rem 0;
+  padding: 0.25rem;
+}
+
+.demo--get-color .demo__element--red1 {
+  background-color: red;
+}
+
+.demo--get-color .demo__element--red2 {
+  background-color: #ff8e8e;
+}
+
+.demo--get-color .demo__element--red3 {
+  background-color: #710000;
+}
+
+.demo--dark-mode .demo__element,
+.demo--light-mode .demo__element {
+  background-color: gray;
+  font-family: BlinkMacSystemFont, -apple-system, "Roboto", "Droid Sans", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1;
+  margin: 0.5rem 0;
+  padding: 0.25rem;
+}
+
+.demo--dark-mode .demo__element {
+  background-color: red;
+}
+@media (prefers-color-scheme: dark) {
+  .demo--dark-mode .demo__element {
+    background-color: blue;
+  }
+}
+html[color-scheme=dark] .demo--dark-mode .demo__element {
+  background-color: blue;
+}
+
+.demo--light-mode .demo__element {
+  background-color: orange;
+}
+@media (prefers-color-scheme: light) {
+  .demo--light-mode .demo__element {
+    background-color: green;
+  }
+}
+html[color-scheme=light] .demo--light-mode .demo__element {
+  background-color: green;
+}
+
+.demo--debug-overlay {
+  position: relative;
+}
+.demo--debug-overlay:after {
+  content: "";
+  z-index: 5;
+  background-image: url("data:image/png;base64,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");
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 1;
+  mix-blend-mode: exclusion;
+}
+
+.demo--debug-overlay .demo__element {
+  background-color: blue;
+  font-family: BlinkMacSystemFont, -apple-system, "Roboto", "Droid Sans", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1;
+  padding: 0.25rem;
+}
+
+.demo--disable-text-select .demo__element {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: black;
+  padding: 5px;
+  font-family: BlinkMacSystemFont, -apple-system, "Roboto", "Droid Sans", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1;
+}
+
+.demo--focusable-only .demo__element {
+  color: black;
+  outline: 1px solid red;
+}
+.demo--focusable-only .demo__element:not(#specificity-override) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.demo--focusable-only .demo__element:not(#specificity-override):active, .demo--focusable-only .demo__element:not(#specificity-override):focus {
+  z-index: 4;
+  width: auto;
+  height: auto;
+  margin: 0;
+  clip: auto;
+  overflow: visible;
+}
+.demo--focusable-only .demo__element:not(#specificity-override):active, .demo--focusable-only .demo__element:not(#specificity-override):focus {
+  background-clip: padding-box;
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+  outline: 1px solid blue;
+  padding: 20px;
+}
+
+.demo--min-width-viewport .demo__element,
+.demo--max-width-viewport .demo__element {
+  font-family: BlinkMacSystemFont, -apple-system, "Roboto", "Droid Sans", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1;
+  background-color: black;
+  padding: 5px;
+}
+
+@media screen and (min-width: 800px) {
+  .demo--min-width-viewport .demo__element {
+    background-color: red;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .demo--max-width-viewport .demo__element {
+    background-color: red;
+  }
+}
+
+.demo--set-px .demo__element {
+  font-family: BlinkMacSystemFont, -apple-system, "Roboto", "Droid Sans", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1;
+  background-color: black;
+  width: 12.5rem;
+}
+
+.demo--ricepaper {
+  background-image: url("https://eoimages.gsfc.nasa.gov/images/imagerecords/146000/146892/namibia_oli_2020130_lrg.jpg");
+}
+
+.demo--ricepaper .demo__element {
+  font-family: BlinkMacSystemFont, -apple-system, "Roboto", "Droid Sans", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1;
+  background-color: rgba(250, 252, 252, 0.96);
+  background-clip: padding-box;
+  border-top-right-radius: 0.625rem;
+  border-bottom-right-radius: 0.625rem;
+  border-top-left-radius: 0.625rem;
+  border-bottom-left-radius: 0.625rem;
+  color: black;
+  padding: 2rem;
+}
+@supports (-webkit-backdrop-filter: blur()) {
+  .demo--ricepaper .demo__element {
+    -webkit-backdrop-filter: saturate(360%) blur(0.25rem);
+    background-color: rgba(250, 252, 252, 0.8);
+  }
+}
+
+.demo--screen-reader-only .demo__element:not(#specificity-override) {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 0.1rem;
+  margin: -0.1rem;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 0.0001rem;
+  display: inline-block;
+  white-space: nowrap;
+  right: 0;
+}
+
+.demo--get-shadow .demo__element {
+  background-clip: padding-box;
+  border-top-right-radius: 0.3125rem;
+  border-bottom-right-radius: 0.3125rem;
+  border-top-left-radius: 0.3125rem;
+  border-bottom-left-radius: 0.3125rem;
+  font-family: BlinkMacSystemFont, -apple-system, "Roboto", "Droid Sans", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1;
+  background: #e30000;
+  color: white;
+  padding: 20px;
+  box-shadow: 0 0.1875rem 0.1875rem rgba(113, 0, 0, 0.34), 0 0rem 0.125rem rgba(113, 0, 0, 0.2);
+}
+
+.demo--set-standard-shadow .demo__element {
+  background-clip: padding-box;
+  border-top-right-radius: 0.3125rem;
+  border-bottom-right-radius: 0.3125rem;
+  border-top-left-radius: 0.3125rem;
+  border-bottom-left-radius: 0.3125rem;
+  font-family: BlinkMacSystemFont, -apple-system, "Roboto", "Droid Sans", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1;
+  box-shadow: 0 0.1875rem 0.1875rem rgba(113, 0, 0, 0.34), 0 0rem 0.125rem rgba(113, 0, 0, 0.2);
+  background: #e30000;
+  color: white;
+  padding: 20px;
+}
+
+.demo--set-interactive-shadow .demo__element {
+  background-clip: padding-box;
+  border-top-right-radius: 0.3125rem;
+  border-bottom-right-radius: 0.3125rem;
+  border-top-left-radius: 0.3125rem;
+  border-bottom-left-radius: 0.3125rem;
+  font-family: BlinkMacSystemFont, -apple-system, "Roboto", "Droid Sans", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1;
+  box-shadow: 0 0.1875rem 0.1875rem rgba(113, 0, 0, 0.34), 0 0rem 0.125rem rgba(113, 0, 0, 0.2);
+  position: relative;
+  box-sizing: border-box;
+  background: #e30000;
+  color: white;
+  padding: 20px;
+  cursor: pointer;
+}
+.demo--set-interactive-shadow .demo__element:after {
+  top: 0rem;
+  right: 0rem;
+  bottom: 0rem;
+  left: 0rem;
+  border-radius: 0rem;
+  box-shadow: 0 0.5rem 0.5625rem rgba(113, 0, 0, 0.4), 0 0rem 0.1875rem rgba(113, 0, 0, 0.24);
+  content: "";
+  opacity: 0;
+  position: absolute;
+  transition: opacity 175ms ease-in;
+}
+.demo--set-interactive-shadow .demo__element:focus:after, .demo--set-interactive-shadow .demo__element:hover:after {
+  opacity: 1;
+}
+.demo--set-interactive-shadow .demo__element:active:after {
+  opacity: 0;
+}
+.demo--set-interactive-shadow .demo__element:after {
+  background-clip: padding-box;
+  border-top-right-radius: 0.3125rem;
+  border-bottom-right-radius: 0.3125rem;
+  border-top-left-radius: 0.3125rem;
+  border-bottom-left-radius: 0.3125rem;
+}
+
+.demo--share-px-value .demo__element {
+  background-color: black;
+  font-family: BlinkMacSystemFont, -apple-system, "Roboto", "Droid Sans", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1;
+  margin: 0.3125rem;
+  padding: 0.3125rem;
+}
+
+.demo--simple-gradient .demo__element {
+  background: -webkit-linear-gradient(#3939ff, blue, #0000c6);
+  font-family: BlinkMacSystemFont, -apple-system, "Roboto", "Droid Sans", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1;
+  margin: 0.3125rem;
+  padding: 0.3125rem;
+}
+
+.demo--set-size .demo__element {
+  font-family: BlinkMacSystemFont, -apple-system, "Roboto", "Droid Sans", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1;
+  background-color: black;
+  width: 12.5rem;
+}
+
+.demo--margin .demo__element {
+  font-family: BlinkMacSystemFont, -apple-system, "Roboto", "Droid Sans", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1;
+  margin-right: 1.25rem;
+  margin-bottom: 1.25rem;
+  background-color: black;
+}
+
+.demo--padding .demo__element {
+  font-family: BlinkMacSystemFont, -apple-system, "Roboto", "Droid Sans", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1;
+  margin: 0.3125rem;
+  padding-right: 1.25rem;
+  padding-bottom: 1.25rem;
+  background-color: black;
+}
+
+.demo--strip-unit .demo__element {
+  font-family: BlinkMacSystemFont, -apple-system, "Roboto", "Droid Sans", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1;
+  color: gray;
+  position: relative;
+}
+
+.demo--set-type .demo__element {
+  font-family: BlinkMacSystemFont, -apple-system, "Roboto", "Droid Sans", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.8125rem;
+  font-weight: 300;
+  font-style: oblique;
+  line-height: 1.4;
+  color: black;
+  position: relative;
+}
+
+.demo--set-type-lineheight .demo__element {
+  font-family: BlinkMacSystemFont, -apple-system, "Roboto", "Droid Sans", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.8125rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.4;
+  line-height: 3;
+  color: black;
+  position: relative;
+}
+
+.demo--set-type-size .demo__element {
+  font-family: BlinkMacSystemFont, -apple-system, "Roboto", "Droid Sans", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.8125rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.4;
+  font-size: 1.125rem;
+  color: black;
+  position: relative;
+}
+
+.demo--set-type-stack .demo__element {
+  font-family: BlinkMacSystemFont, -apple-system, "Roboto", "Droid Sans", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.8125rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.4;
+  font-family: "Andale Mono", AndaleMono, monospace;
+  color: black;
+  position: relative;
+}
+
+.demo--set-type-style .demo__element {
+  font-family: BlinkMacSystemFont, -apple-system, "Roboto", "Droid Sans", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.8125rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.4;
+  font-style: oblique;
+  color: black;
+  position: relative;
+}
+
+.demo--set-type-weight .demo__element {
+  font-family: BlinkMacSystemFont, -apple-system, "Roboto", "Droid Sans", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.8125rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.4;
+  font-weight: 900;
+  color: black;
+  position: relative;
+}
+
+/*# sourceMappingURL=style.css.map */

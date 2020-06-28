@@ -1,0 +1,5 @@
+@use "type-scale" as *;
+
+@mixin set-type-size($type-scale:5) {
+  font-size: type-scale($type-scale);
+}
