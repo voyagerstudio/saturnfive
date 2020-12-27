@@ -3,3 +3,4 @@ concat-tool/
 concat-tool/*
 *.css.map
 *.scssc
+.DS_Store

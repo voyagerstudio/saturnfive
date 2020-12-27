@@ -1,0 +1,26 @@
+@use "../configuration/satfive-config" as *;
+@use "sass:map";
+
+@mixin margin-utility-gen {
+    $util-class-count: map.get($satfive-config-defaults, utilities, margin, number-of-classes);
+    $multiplier: map.get($satfive-config-defaults, utilities, margin, px-increments);
+
+    .mgn-1 {
+        margin: 1px;
+    }
+
+    .mgn-2 {
+        margin: 2px;
+    }
+
+    @for  $i from 3 through $util-class-count {
+        
+        $count: $i - 2;
+
+        .mgn-#{$i} {
+            margin: ($count * $multiplier)px;
+            background: red !important;
+        }
+    }
+}
+

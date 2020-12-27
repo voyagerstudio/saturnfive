@@ -1,0 +1,22 @@
+$satfive-config: ();
+
+$satfive-config-defaults: (
+    global: (
+        space-multiplier: 4,
+    ),
+    utilities: (
+        margin: (
+            number-of-classes: 10,
+            px-increments: 4,
+        ),
+        padding: (
+            number-of-classes: 10,
+            px-increments: 4,
+        )
+    )
+);
+
+
+@function get-config($value...) {
+
+}
